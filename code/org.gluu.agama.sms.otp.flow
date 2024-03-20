@@ -1,0 +1,45 @@
+// Start subflow for user otp code validation
+Flow org.gluu.agama.sms.otp
+     Basepath ""
+     Inputs otpService username maskedPhone
+// Log flow imputs provided by the flow caller.
+Log "@info Information received from the caller: " username maskedPhone
+// Declare a variable for UI feedback messages.
+otpUiFeedback = {}
+otpUiFeedback.maskedPhone = maskedPhone
+otpUiFeedback.username = username
+otpUiFeedback.infoMessage = "An OTP code has been send to you on your mobile phone."
+// Try collecting the OTP code from the UI for maximum x(3) times.
+y = Repeat 3 times max
+     // Show UI to collect OTP code from user.
+     otpCreds = RRF "otp.ftlh" otpUiFeedback
+     // Add log entry with collected code in log file.
+     Log "@info Information provided by the user is : " otpCreds
+     When otpCreds.hasRequestedNewCode is not "yes"
+          // Validate the OTP code provided by the user.
+          otpValidationResult = Call otpService validateOTPCode username otpCreds.code
+          // Add log entry withvalidation result in log file.
+          Log "@info OTP validation result is:" otpValidationResult
+          // If otp validation was successful
+          When otpValidationResult is true
+               // OTP flow completed successfully.
+               Finish otpValidationResult
+          // The maximum number of attempt has been reached.
+          Log "@error Invalid code provided. Number of attempt(s): " idx[0]
+          // Provide feedback to user.
+          otpUiFeedback.errorMessage = "The provided code is not valid."
+     // Log new code request
+     Log "@info User has requested a new code."
+     // Resend OTP code to user
+     resendHasSucceed = Call otpService sendOTPCode username
+     When resendHasSucceed is null
+          Log "@info Fail to resend new code to user. " resendHasSucceed
+          // Provide feedback about the otp resend error to user.
+          otpUiFeedback.infoMessage = "Error occurs while sending new code to you. Please contact site administrator."
+     Log "@info New OTP code send successfully!" resendHasSucceed
+     // Provide feedback about the error message to user.
+     otpUiFeedback.infoMessage = "A new OTP code has been send to you on your mobile phone."
+//  Maximum attempts reached. OTP validation failed!
+Log "@error Maximum attempts reached. OTP validation failed!"
+// OTP validation has failed.
+Finish otpValidationResult

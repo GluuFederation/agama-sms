@@ -1,0 +1,24 @@
+{
+    "projectName": "agama-sms",
+    "description": "OTP authentication with SMS",
+    "type": "community",
+    "author": "syntrydy",
+    "version": "0.0.1",
+    "authorWebsite": "https://github.com/GluuFederation/agama-sms",
+    "githubUri": "https://github.com/GluuFederation/agama-sms",
+    "license": "apache-2.0",
+    "lastUpdated": "1706193997044",
+    "tags": [
+        "authentication",
+        "community"
+    ],
+    "noDirectLaunch": [
+        "org.gluu.agama.sms.otp"
+    ],
+    "configs": {
+        "org.gluu.agama.sms.main": {},
+        "": {},
+        "org.gluu.agama.sms.otp": {}
+    },
+    "name": "agama-sms"
+}
