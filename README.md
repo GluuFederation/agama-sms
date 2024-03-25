@@ -14,7 +14,7 @@ The Agama Project employs the use of SMS One-Time Password (OTP) verification to
 ## Requirements
 
 1. A running instance of Jans Auth Server
-1. An active user added into Jans Server with the following claims set properly: 
+1. An active user added into Jans Server with the phone number setup properly.
 1. A Twilio Account with access to the settings.
 
 ## Deployment

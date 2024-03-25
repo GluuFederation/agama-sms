@@ -19,7 +19,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 1832.9433450392728,
 				"y": 946.0605818758354
@@ -1205,7 +1205,7 @@
 					"comment": "Start subflow for user otp code validation",
 					"isTopLevelFlow": false,
 					"basepath": "",
-					"configParams": "{}",
+					"configParams": "{ }",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
 					"inputs": "otpService username maskedPhone",
@@ -1218,7 +1218,7 @@
 				"x": 30,
 				"y": 30
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 30,
@@ -1833,8 +1833,8 @@
 		}
 	],
 	"viewport": {
-		"x": 64.42134979849811,
-		"y": 101.88108702033549,
-		"zoom": 0.584496487035563
+		"x": 10,
+		"y": 15,
+		"zoom": 1
 	}
 }
