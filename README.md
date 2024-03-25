@@ -7,17 +7,24 @@
 [![Issues][issues-shield]][issues-url]
 [![Apache License][license-shield]][license-url]
 
-The Agama Project employs the use of SMS One-Time Password (OTP) verification to confirm ownership and control of a mobile device.
+This Agama Project uses OTP SMS to helps enhance security, reduce the risk of unauthorized access and fraud, and ensure compliance with regulatory requirements in various online services and transactions.
+For more information you can also see: 
+  - https://www.solutions4mobiles.com/product/mobile-number-verification
 
-## How it works
 
 ## Requirements
 
-1. A running instance of Jans Auth Server
-1. An active user added into Jans Server with the phone number setup properly.
-1. A Twilio Account with access to the settings.
+Agama Dependency: No dependency
+Third Party Accounts: A Twilio Account with access to the settings
 
-## Deployment
+
+## Supported IDPs
+
+## Flows
+
+## Configuration
+
+## Demo
 
 Download the latest [agama-sms.gama](https://github.com/GluuFederation/agama-sms/releases/latest/download/agama-sms.gama) file and deploy it in Auth Sever.
 
