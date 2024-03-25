@@ -10,7 +10,8 @@
     "lastUpdated": "1706193997044",
     "tags": [
         "authentication",
-        "community"
+        "community",
+        "jans"
     ],
     "noDirectLaunch": [
         "org.gluu.agama.sms.otp"
