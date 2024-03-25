@@ -16,7 +16,8 @@
 				"position": {
 					"x": 2866,
 					"y": 492
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -41,7 +42,8 @@
 				"position": {
 					"x": 2776,
 					"y": 767
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -99,7 +101,7 @@
 				"x": 2264.4,
 				"y": 499
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -977,7 +979,7 @@
 					"comment": "Start the excecution of the main flow",
 					"isTopLevelFlow": true,
 					"basepath": "",
-					"configParams": "{}",
+					"configParams": "{\n  \"ACCOUNT_SID\": \"PUT_YOUR_TWILIO_ACCOUNT_SID_HERE\",\n  \"AUTH_TOKEN\": \"PUT_YOUR_TWILIO_AUTH_TOKEN_HERE\",\n  \"FROM_NUMBER\": \"PUT_YOUR_TWILIO_FROM_NUMBER_HERE\"\n}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
 					"inputs": "",
@@ -1541,8 +1543,8 @@
 		}
 	],
 	"viewport": {
-		"x": -39,
-		"y": 178,
-		"zoom": 1
+		"x": 142.08278954875433,
+		"y": 140.72881849679243,
+		"zoom": 0.6070974421975237
 	}
 }
