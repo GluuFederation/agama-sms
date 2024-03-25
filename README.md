@@ -24,6 +24,18 @@ Third Party Accounts: A Twilio Account with access to the settings
 
 ## Configuration
 
+Sample JSON:
+
+    ```
+        {
+            "org.gluu.agama.sms.otp": {},
+            "org.gluu.agama.sms.main": {
+              "ACCOUNT_SID": "PUT_YOUR_TWILIO_ACCOUNT_SID_HERE",
+              "AUTH_TOKEN": "PUT_YOUR_TWILIO_AUTH_TOKEN_HERE",
+              "FROM_NUMBER": "PUT_YOUR_TWILIO_FROM_NUMBER_HERE"
+            }
+        }
+
 ## Demo
 
 Download the latest [agama-sms.gama](https://github.com/GluuFederation/agama-sms/releases/latest/download/agama-sms.gama) file and deploy it in Auth Sever.
