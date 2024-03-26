@@ -7,32 +7,42 @@
 [![Issues][issues-shield]][issues-url]
 [![Apache License][license-shield]][license-url]
 
-The Agama Project employs the use of SMS One-Time Password (OTP) verification to confirm ownership and control of a mobile device.
+This Agama Project uses OTP SMS to helps enhance security, reduce the risk of unauthorized access and fraud, and ensure compliance with regulatory requirements in various online services and transactions.
+For more information you can also see: 
+  - https://www.solutions4mobiles.com/product/mobile-number-verification
 
-## How it works
 
 ## Requirements
 
-1. A running instance of Jans Auth Server
-1. An active user added into Jans Server with the phone number setup properly.
-1. A Twilio Account with access to the settings.
+Agama Dependency: No dependency
+Third Party Accounts: A Twilio Account with access to the settings.
 
-## Deployment
 
-Download the latest [agama-sms.gama](https://github.com/GluuFederation/agama-sms/releases/latest/download/agama-sms.gama) file and deploy it in Auth Sever.
+## Supported IDPs
 
-Follow the steps below:
+| IDP           | Description   |
+| ------------- | ------------- |
+| Jans Auth Server  | https://docs.jans.io/v1.1.0/admin/planning/  |
 
-- Copy (SCP/SFTP) the agama-sms.gama file of this project to a location in your `Jans Server`
-- Connect (SSH) to your `Jans Server` and open TUI: `python3 /opt/jans/jans-cli/jans_cli_tui.py`
-- Navigate to the `Agama` tab and then select `"Upload project"`. Choose the gama file
-- Wait for about one minute and then select the row in the table corresponding to this project
-- Press `d` and ensure there were not deployment errors
-- Pres `ESC` to close the dialog
 
-## Configure Agama SMS 
+## Flows
 
-- Create a json file(agama-sms-conf.json) somewhere on Jans Server with the following contains
+| Qualified Name| Description   |
+| ------------- | ------------- |
+| org.gluu.agama.sms.main  | This is the main flow, it control the first factor of the authentication and trigger the second factor.|
+| org.gluu.agama.sms.otp  | This flow collect OTP code from user and perform validation. When validation is done the result is send back to the main flow |
+
+
+## Configuration
+
+| Flow          | Property      | Value Description      |
+| ------------- | ------------- |----------------------- | 
+| org.gluu.agama.sms.main  | ACCOUNT_SID|Your twilio ACCOUNT_SID (available in your twilio account settings page)|
+| org.gluu.agama.sms.main  | AUTH_TOKEN|Your twilio AUTH_TOKEN (available in your twilio account settings page)|
+| org.gluu.agama.sms.main  | FROM_NUMBER|Your twilio FROM_NUMBER (available in your twilio account settings page)|
+
+Sample JSON:
+
     ```
         {
             "org.gluu.agama.sms.otp": {},
@@ -42,22 +52,26 @@ Follow the steps below:
               "FROM_NUMBER": "PUT_YOUR_TWILIO_FROM_NUMBER_HERE"
             }
         }
-    ```
-- Fill the twilio settings accordingly
-- Save the file
-- Open TUI and navigate to `Agama`
-- Select the deployed project(agama-sms) and hit `c`
-- Select `Import sample configuration` and select a directory and a filename
-- Select the config file edited above(agama-sms-conf.json)
-- Press Ok
 
-## Testing
+## Demo
 
-[Jans-tarp](https://github.com/JanssenProject/jans/tree/main/demos/jans-tarp) can be used for a quick test
 
-## Demonstration
+## Contributors
 
-# License
+<table>
+ <tr>
+  <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+    <a href=https://github.com/syntrydy>
+        <img src="https://avatars.githubusercontent.com/u/7513418?v=4" width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Thomas Gasmyr>
+        <br />
+        <sub style="font-size:14px"><b>Mougang Gasmyr</b></sub>
+    </a>
+  </td>
+ </tr>
+</table>
+
+
+## License
 
 This project is licensed under the [Apache 2.0](https://github.com/GluuFederation/agama-sms/blob/main/LICENSE)
 
