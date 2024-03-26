@@ -15,7 +15,7 @@ For more information you can also see:
 ## Requirements
 
 Agama Dependency: No dependency
-Third Party Accounts: A Twilio Account with access to the settings
+Third Party Accounts: A Twilio Account with access to the settings.
 
 
 ## Supported IDPs
