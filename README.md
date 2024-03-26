@@ -30,7 +30,7 @@ For more information you can also see:
 | Qualified Name| Description   |
 | ------------- | ------------- |
 | org.gluu.agama.sms.main  | This is the main flow, it control the first factor of the authentication and trigger the second factor.|
-| org.gluu.agama.sms.otp  | This flow collect OTP code from user and perform validation. When validation is done the result is send back to the main flow |
+| org.gluu.agama.sms.otp  | This flow collect OTP code from user and perform validation. When validation is done the result is send back to the main flow.|
 
 
 ## Configuration
@@ -52,6 +52,7 @@ Sample JSON:
               "FROM_NUMBER": "PUT_YOUR_TWILIO_FROM_NUMBER_HERE"
             }
         }
+     ```
 
 ## Demo
 
