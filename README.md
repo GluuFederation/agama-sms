@@ -29,8 +29,8 @@ Third Party Accounts: A Twilio Account with access to the settings
 
 | Qualified Name| Description   |
 | ------------- | ------------- |
-| org.gluu.agama.sms.main  | https://docs.jans.io/v1.1.0/admin/planning/  |
-| org.gluu.agama.sms.otp  | https://docs.jans.io/v1.1.0/admin/planning/  |
+| org.gluu.agama.sms.main  | This is the main flow, it control the first factor of the authentication and trigger the second factor.|
+| org.gluu.agama.sms.otp  | This flow collect OTP code from user and perform validation. When validation is done the result is send back to the main flow |
 
 
 ## Configuration
