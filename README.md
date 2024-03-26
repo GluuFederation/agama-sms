@@ -35,6 +35,12 @@ Third Party Accounts: A Twilio Account with access to the settings
 
 ## Configuration
 
+| Flow          | Property      | Value Description      |
+| ------------- | ------------- |----------------------- | 
+| org.gluu.agama.sms.main  | ACCOUNT_SID|Your twilio ACCOUNT_SID (available in your twilio account settings page)|
+| org.gluu.agama.sms.main  | AUTH_TOKEN|Your twilio AUTH_TOKEN (available in your twilio account settings page)|
+| org.gluu.agama.sms.main  | FROM_NUMBER|Your twilio FROM_NUMBER (available in your twilio account settings page)|
+
 Sample JSON:
 
     ```
