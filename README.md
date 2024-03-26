@@ -20,7 +20,18 @@ Third Party Accounts: A Twilio Account with access to the settings
 
 ## Supported IDPs
 
+| IDP           | Description   |
+| ------------- | ------------- |
+| Jans Auth Server  | https://docs.jans.io/v1.1.0/admin/planning/  |
+
+
 ## Flows
+
+| Qualified Name| Description   |
+| ------------- | ------------- |
+| org.gluu.agama.sms.main  | https://docs.jans.io/v1.1.0/admin/planning/  |
+| org.gluu.agama.sms.otp  | https://docs.jans.io/v1.1.0/admin/planning/  |
+
 
 ## Configuration
 
