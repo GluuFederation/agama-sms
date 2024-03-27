@@ -364,7 +364,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 430,
@@ -438,7 +438,7 @@
 					"basepath": "",
 					"configParams": "{ }",
 					"nodeIcon": "material-symbols:line-start-square",
-					"timeout": "700",
+					"timeout": "200",
 					"inputs": "otpService username",
 					"configs": "",
 					"flowname": "org.gluu.agama.register"
@@ -449,7 +449,7 @@
 				"x": 30,
 				"y": 30
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 30,
