@@ -25,13 +25,12 @@
 				  <div role="alert" class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400">
 					<span class="font-medium">Hi ${username}!</span>
 					<span class="font-medium">It looks like there is no phone number associated to your account.</span>
-					<span class="font-medium">We need your </span>
 				  </div>
 				</div>
 				<div class="grid gap-6 mb-6 md:grid-cols-2">
 				  <div>
-					<label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone number:</label>
-					<input type="text" id="first_name" placeholder="+237697778845" required="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+					<label for="phoneNumber" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone number:</label>
+					<input type="text" id="phoneNumber" placeholder="+237697778845" required="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
 				  </div>
 				</div>
 				<p id="helper-text-explanation" class="mt-2 mb-4 text-sm text-gray-500 dark:text-gray-400">We will send you an SMS with a verification code.
