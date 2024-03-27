@@ -283,6 +283,7 @@
 					"nodeIcon": "fluent-mdl2:trigger-approval",
 					"flowFileName": "org.gluu.agama.sms.otp",
 					"arguments": [
+						"otpService",
 						"username",
 						"maskedPhone"
 					],
@@ -717,7 +718,7 @@
 				"x": 2399.3335926546492,
 				"y": 832.5792339867169
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -2177,8 +2178,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1121,
-		"y": -101,
+		"x": -1291,
+		"y": -69,
 		"zoom": 0.75
 	}
 }
