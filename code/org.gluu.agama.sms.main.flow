@@ -33,17 +33,17 @@ count = Repeat 3 times max
                // Check if OTP validation vas okay
                When username is true
                     // The main flow has completed successfully.
-                    it_vexrn = {success:true, data: { userId: credentials.username}}
-                    Finish it_vexrn
+                    it_sqbat = {success:true, data: { userId: credentials.username}}
+                    Finish it_sqbat
                Otherwise
                     // Closing the main flow with error.
-                    it_ybive = {success:false, error: "Your error message here"}
-                    Finish it_ybive
+                    it_nenwc = {success:false, error: "Your error message here"}
+                    Finish it_nenwc
           Otherwise
                // TP Code validation is completed.
                Log "@info The following user don't has a phone number : " username
                // Launch phone number registration subflow.
-               phoneRegistration = Trigger org.gluu.agama.register username
+               phoneRegistration = Trigger org.gluu.agama.register otpService username
                // Log phone registration result
                Log "@info Phone number registration done"
                maskedPhone = Call otpService sendOTPCode credentials.username
@@ -52,12 +52,12 @@ count = Repeat 3 times max
                // Check if OTP validation is okay
                When otpFeedBack.success is true
                     // The main flow has completed successfully.
-                    it_ztkap = {success:true, data: { userId: credentials.username}}
-                    Finish it_ztkap
+                    it_zcgwt = {success:true, data: { userId: credentials.username}}
+                    Finish it_zcgwt
                Otherwise
                     // Closing the main flow with error.
-                    it_jzwdy = {success:false, error: "The flow has been completed with error."}
-                    Finish it_jzwdy
+                    it_vypnn = {success:false, error: "The flow has been completed with error."}
+                    Finish it_vypnn
      // Invalid credentials provided.
      Log "@error Invalid credentials provided."
      // Provide feedback about the error message to user.
@@ -65,5 +65,5 @@ count = Repeat 3 times max
 // Maximum attempts reached. Password validation failed!
 Log "@info Maximum attempts reached. Password validation failed!"
 // Maximum attempts reached. Password validation failed!
-it_oygqe = {success:false, error: "Password validation failed!"}
-Finish it_oygqe
+it_fbvcb = {success:false, error: "Password validation failed!"}
+Finish it_fbvcb
