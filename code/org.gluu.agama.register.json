@@ -401,7 +401,7 @@
 					"configParams": "{ }",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "200",
-					"inputs": "otpService username",
+					"inputs": "otpService username phoneNumber",
 					"configs": "",
 					"flowname": "org.gluu.agama.register"
 				},
@@ -411,7 +411,7 @@
 				"x": 30,
 				"y": 30
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 30,
@@ -666,8 +666,8 @@
 		}
 	],
 	"viewport": {
-		"x": -112,
-		"y": 82,
+		"x": 10,
+		"y": 270,
 		"zoom": 0.75
 	}
 }
