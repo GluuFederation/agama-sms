@@ -28,7 +28,7 @@
 				  </div>
 				</div>
 				<div class="grid gap-6 mb-6 md:grid-cols-2">
-				  <div class="relative mb-2">
+				  <div>
 					<label for="username" class="bg-gray-50label mt-2 ml-1 leading-tighter text-gray-600 text-base cursor-text">
 					  Username
 					</label>
