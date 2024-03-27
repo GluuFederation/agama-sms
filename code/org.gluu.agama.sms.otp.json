@@ -339,8 +339,8 @@
 			"dragging": false
 		},
 		{
-			"width": 210,
-			"height": 140,
+			"width": 110,
+			"height": 60,
 			"id": "Agama-when-Node-1db88cf1-f239-47ea-ae4c-fb5d481e2750",
 			"position": {
 				"x": 1767,
@@ -620,8 +620,8 @@
 			"dragging": false
 		},
 		{
-			"width": 210,
-			"height": 140,
+			"width": 110,
+			"height": 60,
 			"id": "Agama-when-Node-b7b973bf-241f-42a8-8912-bd49a76ce2e7",
 			"position": {
 				"x": 1685.2290280495758,
@@ -1218,7 +1218,7 @@
 				"x": 30,
 				"y": 30
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 30,
@@ -1226,8 +1226,8 @@
 			}
 		},
 		{
-			"width": 210,
-			"height": 140,
+			"width": 110,
+			"height": 60,
 			"id": "Agama-when-Node-ac81dc75-0694-44a9-93e0-3c5ca270cb6d",
 			"position": {
 				"x": 1117,
@@ -1833,8 +1833,8 @@
 		}
 	],
 	"viewport": {
-		"x": 10,
-		"y": 15,
-		"zoom": 1
+		"x": 87,
+		"y": 171,
+		"zoom": 0.75
 	}
 }

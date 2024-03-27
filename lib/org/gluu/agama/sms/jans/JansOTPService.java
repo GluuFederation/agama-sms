@@ -81,18 +81,17 @@ public class JansOTPService extends OTPService {
     public boolean registerPhone(String username, String phoneNumber) {
         try {
             logger.info("Registering phone {} for user  {}.", phoneNumber, username);
-            User user =getUser(USERNAME,username);
+            User user = getUser(USERNAME,username);
             user.setAttribute(PHONE,phoneNumber,false);
             user.setAttribute(MOBILE,phoneNumber,false);
-            if(user !=null){
+            if(user != null){
                 userService.updateUser(user);
                 logger.info("Phone number  {} for user  {} registered.", phoneNumber, username);
-                sendOTPCode(username);
                 return true;
             }
             return false;
         } catch (Exception exception) {
-            logger.info("OTP code {} provided by {} is not valid. Error: {} ", code, username, exception);
+            logger.info("Error updating user {} phone number. Error: {} ", username, exception);
             return false;
         }
     }
@@ -109,9 +108,9 @@ public class JansOTPService extends OTPService {
 
     private String getUserPhoneNumber(String username) {
         User currentUser = getUser(USERNAME, username);
-        String phoneNumber = currentUser.getAttribute("mobile");
+        String phoneNumber = currentUser.getAttribute(MOBILE);
         if (phoneNumber == null) {
-            phoneNumber = currentUser.getAttribute("telephoneNumber");
+            phoneNumber = currentUser.getAttribute(PHONE);
         }
         return phoneNumber;
     }

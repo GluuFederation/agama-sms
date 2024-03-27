@@ -29,8 +29,9 @@ For more information you can also see:
 
 | Qualified Name| Description   |
 | ------------- | ------------- |
-| org.gluu.agama.sms.main  | This is the main flow, it control the first factor of the authentication and trigger the second factor.|
-| org.gluu.agama.sms.otp  | This flow collect OTP code from user and perform validation. When validation is done the result is send back to the main flow.|
+| org.gluu.agama.sms.main    | This is the main flow, it control the first factor of the authentication and trigger the second factor.|
+| org.gluu.agama.sms.otp     | This flow collect OTP code from user and perform validation. When validation is done the result is send back to the main flow.|
+| org.gluu.agama.sms.register| This flow is use to register user's phone number if the phone number is not setup.|
 
 
 ## Configuration
@@ -46,6 +47,7 @@ Sample JSON:
     ```
         {
             "org.gluu.agama.sms.otp": {},
+            "org.gluu.agama.sms.register": {},
             "org.gluu.agama.sms.main": {
               "ACCOUNT_SID": "PUT_YOUR_TWILIO_ACCOUNT_SID_HERE",
               "AUTH_TOKEN": "PUT_YOUR_TWILIO_AUTH_TOKEN_HERE",

@@ -23,7 +23,8 @@
             "FROM_NUMBER": "PUT_YOUR_TWILIO_FROM_NUMBER_HERE"
         },
         "org.gluu.agama.sms.otp": {},
-        "org.gluu.agama.register": {}
+        "org.gluu.agama.register": {},
+        "": {}
     },
     "name": "agama-sms"
 }
