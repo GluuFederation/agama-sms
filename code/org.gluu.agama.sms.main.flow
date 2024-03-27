@@ -22,20 +22,14 @@ count = Repeat 3 times max
           maskedPhone = Call otpService sendOTPCode credentials.username
           // Assign username variable.
           username = credentials.username
-          // The OTP Code has been send to user.
-          Log "@info OTP generated and send to: " maskedPhone
-          // Trigger OTP subflow
-          otpFeedBack | otpException = Trigger org.gluu.agama.sms.otp otpService username maskedPhone
-          // OTP Code validation is completed.
-          Log "@info OTP Code validation completed with status: " otpFeedBack
-          // Check if OTP validation vas okay
-          When otpFeedBack.success is true
-               // The main flow has completed successfully.
-               it_ibczj = {success:true, data: { userId: credentials.username}}
-               Finish it_ibczj
-          // Closing the main flow with error.
-          it_mumfq = {success:false, error: "The flow has been completed with error."}
-          Finish it_mumfq
+          // User has a phone number setup
+          When maskedPhone is not null
+               // The OTP Code has been send to user.
+               Log "@info OTP generated and send to: " maskedPhone
+               // Trigger OTP subflow
+               otpFeedBack | otpException = Trigger org.gluu.agama.sms.otp username maskedPhone
+               // OTP Code validation is completed.
+               Log "@info OTP Code validation completed with status: " otpFeedBack
      // Invalid credentials provided.
      Log "@error Invalid credentials provided."
      // Provide feedback about the error message to user.
@@ -43,5 +37,5 @@ count = Repeat 3 times max
 // Maximum attempts reached. Password validation failed!
 Log "@info Maximum attempts reached. Password validation failed!"
 // Maximum attempts reached. Password validation failed!
-it_zilrv = {success:false, error: "Password validation failed!"}
-Finish it_zilrv
+it_smaio = {success:false, error: "Password validation failed!"}
+Finish it_smaio
