@@ -466,6 +466,7 @@
 					"nodeIcon": "fluent-mdl2:trigger-approval",
 					"flowFileName": "org.gluu.agama.register",
 					"arguments": [
+						"otpService",
 						"username"
 					],
 					"asssignedVariableName": "phoneRegistration",
@@ -2071,8 +2072,8 @@
 		}
 	],
 	"viewport": {
-		"x": -645.3669980947352,
-		"y": 108.30443857112294,
-		"zoom": 0.5
+		"x": -1096,
+		"y": -58,
+		"zoom": 0.75
 	}
 }
