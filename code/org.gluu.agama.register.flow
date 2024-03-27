@@ -4,6 +4,7 @@ Flow org.gluu.agama.register
      Inputs otpService username
 Log "@info start phone number registration flow"
 phoneUiFeedback = {}
+phoneUiFeedback.username = username
 Repeat 3 times max
      // Retrieve user phone number from UI.
      phoneNumber = RRF "register.ftlh" phoneUiFeedback
