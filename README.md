@@ -14,8 +14,8 @@ For more information you can also see:
 
 ## Requirements
 
-Agama Dependency: No dependency
-Third Party Accounts: A Twilio Account with access to the settings.
+- Agama Dependency: No dependency
+- Third Party Accounts: A Twilio Account with access to the settings.
 
 
 ## Supported IDPs
@@ -30,16 +30,16 @@ Third Party Accounts: A Twilio Account with access to the settings.
 | Qualified Name| Description   |
 | ------------- | ------------- |
 | org.gluu.agama.sms.main  | This is the main flow, it control the first factor of the authentication and trigger the second factor.|
-| org.gluu.agama.sms.otp  | This flow collect OTP code from user and perform validation. When validation is done the result is send back to the main flow |
+| org.gluu.agama.sms.otp  | This flow collect OTP code from user and perform validation. When validation is done the result is send back to the main flow.|
 
 
 ## Configuration
 
 | Flow          | Property      | Value Description      |
 | ------------- | ------------- |----------------------- | 
-| org.gluu.agama.sms.main  | ACCOUNT_SID|Your twilio ACCOUNT_SID (available in your twilio account settings page)|
-| org.gluu.agama.sms.main  | AUTH_TOKEN|Your twilio AUTH_TOKEN (available in your twilio account settings page)|
-| org.gluu.agama.sms.main  | FROM_NUMBER|Your twilio FROM_NUMBER (available in your twilio account settings page)|
+| org.gluu.agama.sms.main  | ACCOUNT_SID | Your twilio ACCOUNT_SID (available in your twilio account settings page)|
+| org.gluu.agama.sms.main  | AUTH_TOKEN | Your twilio AUTH_TOKEN (available in your twilio account settings page)|
+| org.gluu.agama.sms.main  | FROM_NUMBER | Your twilio FROM_NUMBER (available in your twilio account settings page)|
 
 Sample JSON:
 
@@ -52,6 +52,7 @@ Sample JSON:
               "FROM_NUMBER": "PUT_YOUR_TWILIO_FROM_NUMBER_HERE"
             }
         }
+     ```
 
 ## Demo
 

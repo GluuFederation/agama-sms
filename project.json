@@ -22,7 +22,8 @@
             "AUTH_TOKEN": "PUT_YOUR_TWILIO_AUTH_TOKEN_HERE",
             "FROM_NUMBER": "PUT_YOUR_TWILIO_FROM_NUMBER_HERE"
         },
-        "org.gluu.agama.sms.otp": {}
+        "org.gluu.agama.sms.otp": {},
+        "org.gluu.agama.register": {}
     },
     "name": "agama-sms"
 }
