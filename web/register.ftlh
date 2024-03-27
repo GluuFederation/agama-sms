@@ -18,7 +18,7 @@
 		<div class="max-w-sm mx-auto md:max-w-lg">
 		  <div class="w-full">
 			<div class="bg-white h-full py-4 rounded text-center">
-			  <form method="post" class="max-w-sm mx-auto my-8">
+			  <form method="post" class="my-8">
 				<h1 class="text-2xl font-bold">Phone Registration
 				</h1>
 				<div class="flex flex-col mt-4">
@@ -29,11 +29,11 @@
 				</div>
 				<div class="grid gap-6 mb-6 md:grid-cols-2">
 				  <div class="relative mb-2">
-			<label for="username" class="bg-gray-50label mt-2 ml-1 leading-tighter text-gray-600 text-base cursor-text">
-			  Username
-			</label>
-			<input type="text" id="username" value="${uid!''}" name="username" autofocus="" class="bg-gray-50 w-full rounded px-3 border border-gray-300 pt-2 pb-2 focus:border-green-700">
-		  </div>
+					<label for="username" class="bg-gray-50label mt-2 ml-1 leading-tighter text-gray-600 text-base cursor-text">
+					  Username
+					</label>
+					<input type="text" id="username" value="${uid!''}" name="username" autofocus="" class="bg-gray-50 w-full rounded px-3 border border-gray-300 pt-2 pb-2 focus:border-green-700">
+				  </div>
 				  <div>
 					<label for="phoneNumber" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone number:</label>
 					<input type="text" id="phoneNumber" placeholder="+237697778845" required="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
