@@ -28,18 +28,18 @@ count = Repeat 3 times max
                // The OTP Code has been send to user.
                Log "@info OTP generated and send to: " maskedPhone
                // Trigger OTP subflow
-               otpFeedBack | otpException = Trigger org.gluu.agama.sms.otp username maskedPhone
+               otpFeedBack | otpException = Trigger org.gluu.agama.sms.otp otpService username maskedPhone
                // OTP Code validation is completed.
                Log "@info OTP Code validation completed with status: " otpFeedBack
                // Check if OTP validation vas okay
                When otpFeedBack.success is true
                     // The main flow has completed successfully.
-                    it_xzihw = {success:true, data: { userId: credentials.username}}
-                    Finish it_xzihw
+                    it_ubvna = {success:true, data: { userId: credentials.username}}
+                    Finish it_ubvna
                Otherwise
                     // Closing the main flow with error.
-                    it_xzlfv = {success:false, error: "Your error message here"}
-                    Finish it_xzlfv
+                    it_vqrys = {success:false, error: "Your error message here"}
+                    Finish it_vqrys
           Otherwise
                // TP Code validation is completed.
                Log "@info The following user don't has a phone number : " username
@@ -53,12 +53,12 @@ count = Repeat 3 times max
                // Check if OTP validation is okay
                When otpFeedBack.success is true
                     // The main flow has completed successfully.
-                    it_nbiof = {success:true, data: { userId: credentials.username}}
-                    Finish it_nbiof
+                    it_rfcrc = {success:true, data: { userId: credentials.username}}
+                    Finish it_rfcrc
                Otherwise
                     // Closing the main flow with error.
-                    it_iolmg = {success:false, error: "The flow has been completed with error."}
-                    Finish it_iolmg
+                    it_cksxj = {success:false, error: "The flow has been completed with error."}
+                    Finish it_cksxj
      // Invalid credentials provided.
      Log "@error Invalid credentials provided."
      // Provide feedback about the error message to user.
@@ -66,5 +66,5 @@ count = Repeat 3 times max
 // Maximum attempts reached. Password validation failed!
 Log "@info Maximum attempts reached. Password validation failed!"
 // Maximum attempts reached. Password validation failed!
-it_wwczw = {success:false, error: "Password validation failed!"}
-Finish it_wwczw
+it_urztt = {success:false, error: "Password validation failed!"}
+Finish it_urztt
