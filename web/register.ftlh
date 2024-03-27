@@ -53,7 +53,6 @@
 	  var form = document.querySelector("form");
 	  form.onsubmit = handleFormValidation;
 	};
-
 	function handleFormValidation() {
 	  var phoneNumber = document.getElementById("phoneNumber").value
 	  if(phoneNumber === ''){
