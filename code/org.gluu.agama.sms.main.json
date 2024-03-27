@@ -3,6 +3,48 @@
 		{
 			"width": 170,
 			"height": 124,
+			"id": "Agama-log-Node-6e75b200-2375-4fcc-bb0d-bdb47762a92c",
+			"position": {
+				"x": 2592.836928061601,
+				"y": 256.4502402369002
+			},
+			"type": "log",
+			"data": {
+				"id": "Agama-log-Node-6e75b200-2375-4fcc-bb0d-bdb47762a92c",
+				"type": "Agama-log-Node",
+				"parentId": "Agama-trigger-Node-17d418c5-fd69-4da7-bfb9-8ade24212b5b",
+				"whenCondition": "WhenFalse",
+				"inRepeatBlock": false,
+				"inIterateBlock": false,
+				"position": {
+					"x": 2592.836928061601,
+					"y": 256.4502402369002
+				},
+				"agamaData": {
+					"id": "Agama-log-Node-6e75b200-2375-4fcc-bb0d-bdb47762a92c",
+					"parentId": "Agama-trigger-Node-17d418c5-fd69-4da7-bfb9-8ade24212b5b",
+					"type": "Agama-log-Node",
+					"displayName": "Log phone registration result",
+					"hasComment": true,
+					"comment": "Log phone registration result",
+					"whenCondition": "WhenFalse",
+					"inRepeatBlock": false,
+					"inIterateBlock": false,
+					"logMessage": "\"Phone number registration done\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16"
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 2592.836928061601,
+				"y": 256.4502402369002
+			}
+		},
+		{
+			"width": 170,
+			"height": 124,
 			"id": "finish-1f75e59c-1e27-450e-a852-ec7ec223b06c",
 			"position": {
 				"x": 3043.0045426238553,
@@ -38,7 +80,8 @@
 					"finishMode": "withFailure",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"displayName": "The flow has been completed with error."
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -85,7 +128,8 @@
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"displayName": "Close flow successfully"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -134,9 +178,10 @@
 				"handles": [
 					"Agama-when-Node-024191b2-8c1d-4e5b-9f36-a0619a6b4ab8.FAILURE",
 					"Agama-when-Node-024191b2-8c1d-4e5b-9f36-a0619a6b4ab8.SUCCESS"
-				]
+				],
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2880.621142641452,
@@ -1674,11 +1719,28 @@
 				"fillOpacity": 0.7
 			},
 			"sourceHandle": "Agama-when-Node-024191b2-8c1d-4e5b-9f36-a0619a6b4ab8.OTHERWISE"
+		},
+		{
+			"id": "Agama-trigger-Node-17d418c5-fd69-4da7-bfb9-8ade24212b5b-Agama-log-Node-6e75b200-2375-4fcc-bb0d-bdb47762a92c-36e4fba5-f40f-4b4d-a337-37444ef56a56",
+			"type": "default",
+			"source": "Agama-trigger-Node-17d418c5-fd69-4da7-bfb9-8ade24212b5b",
+			"target": "Agama-log-Node-6e75b200-2375-4fcc-bb0d-bdb47762a92c",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#bee0d2",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			}
 		}
 	],
 	"viewport": {
-		"x": -1633.0303629711939,
-		"y": -375.9261105576511,
+		"x": -1626.0303629711939,
+		"y": -162.9261105576511,
 		"zoom": 0.8857444960721479
 	}
 }
