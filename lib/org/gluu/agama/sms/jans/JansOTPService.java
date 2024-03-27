@@ -87,7 +87,6 @@ public class JansOTPService extends OTPService {
             if(user != null){
                 userService.updateUser(user);
                 logger.info("Phone number  {} for user  {} registered.", phoneNumber, username);
-                sendOTPCode(username);
                 return true;
             }
             return false;
