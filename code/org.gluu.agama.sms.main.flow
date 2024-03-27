@@ -33,16 +33,18 @@ count = Repeat 3 times max
                // Check if OTP validation vas okay
                When otpFeedBack.success is true
                     // The main flow has completed successfully.
-                    it_ujhha = {success:true, data: { userId: credentials.username}}
-                    Finish it_ujhha
+                    it_yfasr = {success:true, data: { userId: credentials.username}}
+                    Finish it_yfasr
                Otherwise
                     // Closing the main flow with error.
-                    it_clsry = {success:false, error: "Your error message here"}
-                    Finish it_clsry
+                    it_cbmim = {success:false, error: "Your error message here"}
+                    Finish it_cbmim
           Otherwise
                // TP Code validation is completed.
                Log "@info The following user don't has a phone number : " username
                phoneRegistration = Trigger org.gluu.agama.register username
+               // Log phone registration result
+               Log "@info Phone number registration done"
      // Invalid credentials provided.
      Log "@error Invalid credentials provided."
      // Provide feedback about the error message to user.
@@ -50,5 +52,5 @@ count = Repeat 3 times max
 // Maximum attempts reached. Password validation failed!
 Log "@info Maximum attempts reached. Password validation failed!"
 // Maximum attempts reached. Password validation failed!
-it_pltek = {success:false, error: "Password validation failed!"}
-Finish it_pltek
+it_eobrt = {success:false, error: "Password validation failed!"}
+Finish it_eobrt
