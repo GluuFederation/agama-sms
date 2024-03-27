@@ -24,6 +24,8 @@ public class JansOTPService extends OTPService {
     private HashMap<String, String> flowConfig;
     private static UserService userService = CdiUtil.bean(UserService.class);
     private static final String USERNAME = "uid";
+    private static final String PHONE = "telephoneNumber";
+    private static final String MOBILE = "mobile";
 
     public static final int OTP_CODE_LENGTH = 6;
 
@@ -66,6 +68,26 @@ public class JansOTPService extends OTPService {
             String storeCode = userCodes.getOrDefault(username, "NULL");
             if (storeCode.equalsIgnoreCase(code)) {
                 userCodes.remove(username);
+                return true;
+            }
+            return false;
+        } catch (Exception exception) {
+            logger.info("OTP code {} provided by {} is not valid. Error: {} ", code, username, exception);
+            return false;
+        }
+    }
+
+    @Override
+    public boolean registerPhone(String username, String phoneNumber) {
+        try {
+            logger.info("Registering phone {} for user  {}.", phoneNumber, username);
+            User user =getUser(USERNAME,username);
+            user.setAttribute(PHONE,phoneNumber,false);
+            user.setAttribute(MOBILE,phoneNumber,false);
+            if(user !=null){
+                userService.updateUser(user);
+                logger.info("Phone number  {} for user  {} registered.", phoneNumber, username);
+                sendOTPCode(username);
                 return true;
             }
             return false;
