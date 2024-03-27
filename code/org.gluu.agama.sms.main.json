@@ -16,7 +16,8 @@
 				"position": {
 					"x": 3330.204140868106,
 					"y": 477.67659416866866
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -41,7 +42,8 @@
 				"position": {
 					"x": 3048.396183082007,
 					"y": 1065.3285922576397
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -1555,7 +1557,7 @@
 					"basepath": "",
 					"configParams": "{\n  \"ACCOUNT_SID\": \"PUT_YOUR_TWILIO_ACCOUNT_SID_HERE\",\n  \"AUTH_TOKEN\": \"PUT_YOUR_TWILIO_AUTH_TOKEN_HERE\",\n  \"FROM_NUMBER\": \"PUT_YOUR_TWILIO_FROM_NUMBER_HERE\"\n}",
 					"nodeIcon": "material-symbols:line-start-square",
-					"timeout": "",
+					"timeout": "700",
 					"inputs": "",
 					"configs": "conf",
 					"flowname": "org.gluu.agama.sms.main"
@@ -1566,7 +1568,7 @@
 				"x": 30,
 				"y": 30
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 30,
@@ -2174,8 +2176,8 @@
 		}
 	],
 	"viewport": {
-		"x": -376.3599583267061,
-		"y": 12.907270580367651,
-		"zoom": 0.5377332180059352
+		"x": 10,
+		"y": 270,
+		"zoom": 0.75
 	}
 }
