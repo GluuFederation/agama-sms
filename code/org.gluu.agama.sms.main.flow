@@ -30,6 +30,10 @@ count = Repeat 3 times max
                otpFeedBack | otpException = Trigger org.gluu.agama.sms.otp username maskedPhone
                // OTP Code validation is completed.
                Log "@info OTP Code validation completed with status: " otpFeedBack
+          Otherwise
+               // TP Code validation is completed.
+               Log "@info The following user don't has a phone number : " username
+               phoneRegistration = Trigger org.gluu.agama.register username
      // Invalid credentials provided.
      Log "@error Invalid credentials provided."
      // Provide feedback about the error message to user.
@@ -37,5 +41,5 @@ count = Repeat 3 times max
 // Maximum attempts reached. Password validation failed!
 Log "@info Maximum attempts reached. Password validation failed!"
 // Maximum attempts reached. Password validation failed!
-it_smaio = {success:false, error: "Password validation failed!"}
-Finish it_smaio
+it_tqjzw = {success:false, error: "Password validation failed!"}
+Finish it_tqjzw
