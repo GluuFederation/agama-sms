@@ -7,7 +7,7 @@ phoneUiFeedback = {}
 phoneUiFeedback.username = username
 Repeat 3 times max
      // Retrieve user phone number from UI.
-     phoneNumber = RRF "register.ftlh" phoneUiFeedback
+     registrationResult = RRF "register.ftlh" phoneUiFeedback
      // Log the phone number
      Log "@info Phone number collected:"  phoneNumber
      // Register user phone number
