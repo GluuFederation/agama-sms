@@ -37,9 +37,10 @@
 					],
 					"asssignedVariableName": "phoneRegistration",
 					"exceptionVariableField": ""
-				}
+				},
+				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2392.836928061601,
@@ -79,7 +80,8 @@
 					"logMessage": "\"The following user don't has a phone number : \" username",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
