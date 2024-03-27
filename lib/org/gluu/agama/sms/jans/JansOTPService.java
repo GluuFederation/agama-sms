@@ -84,7 +84,7 @@ public class JansOTPService extends OTPService {
             User user =getUser(USERNAME,username);
             user.setAttribute(PHONE,phoneNumber,false);
             user.setAttribute(MOBILE,phoneNumber,false);
-            if(user !=null){
+            if(user != null){
                 userService.updateUser(user);
                 logger.info("Phone number  {} for user  {} registered.", phoneNumber, username);
                 sendOTPCode(username);
