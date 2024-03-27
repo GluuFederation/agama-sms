@@ -38,7 +38,8 @@
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
 			"positionAbsolute": {
 				"x": 1080,
@@ -80,9 +81,10 @@
 					"logMessage": "\"Max number of attemps has been reached.\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 880,
@@ -261,7 +263,9 @@
 					"nodeIcon": "ph:globe-simple",
 					"templatePath": "register.ftlh",
 					"asssignedVariableName": "phoneNumber",
-					"arguments": "phoneUiFeedback"
+					"arguments": [
+						"phoneUiFeedback"
+					]
 				},
 				"skake": false
 			},
@@ -349,13 +353,18 @@
 							"variableTypeCheck": false,
 							"assignmentExpression": "{}",
 							"assignedVariableName": "phoneUiFeedback"
+						},
+						{
+							"variableTypeCheck": false,
+							"assignmentExpression": "username",
+							"assignedVariableName": "phoneUiFeedback.username"
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 430,
@@ -623,8 +632,8 @@
 		}
 	],
 	"viewport": {
-		"x": 66,
-		"y": 188,
+		"x": 10,
+		"y": 270,
 		"zoom": 0.75
 	}
 }
