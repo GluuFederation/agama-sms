@@ -12,3 +12,6 @@ Repeat 3 times max
      // Register user phone number
      phoneRegistrationResult = Call otpService registerPhone username phoneNumber
      Finish phoneRegistrationResult
+// Max number of attemps has been reached.
+Log "@info Max number of attemps has been reached."
+phoneUiFeedback.errorMessage = "Invalide phone number"
