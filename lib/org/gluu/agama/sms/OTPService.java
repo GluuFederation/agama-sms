@@ -13,6 +13,8 @@ public abstract class OTPService {
 
     public abstract boolean validateOTPCode(String username, String code);
 
+    public abstract boolean registerPhone(String username, String phoneNumber);
+
     public static OTPService getInstance(HashMap config){
         return  new JansOTPService(config);
     }
