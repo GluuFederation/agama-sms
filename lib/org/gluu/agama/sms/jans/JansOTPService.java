@@ -109,9 +109,9 @@ public class JansOTPService extends OTPService {
 
     private String getUserPhoneNumber(String username) {
         User currentUser = getUser(USERNAME, username);
-        String phoneNumber = currentUser.getAttribute("mobile");
+        String phoneNumber = currentUser.getAttribute(MOBILE);
         if (phoneNumber == null) {
-            phoneNumber = currentUser.getAttribute("telephoneNumber");
+            phoneNumber = currentUser.getAttribute(PHONE);
         }
         return phoneNumber;
     }
