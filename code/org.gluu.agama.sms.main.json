@@ -38,7 +38,8 @@
 					"finishMode": "withFailure",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"displayName": "Closing the flow with error"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -85,7 +86,8 @@
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"displayName": "Closing the flow successfully"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -134,9 +136,10 @@
 				"handles": [
 					"Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929.FAILURE",
 					"Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929.SUCCESS"
-				]
+				],
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 3192.836928061601,
@@ -181,7 +184,8 @@
 					],
 					"asssignedVariableName": "otpFeedBack",
 					"exceptionVariableField": "otpException"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -230,7 +234,8 @@
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "maskedPhone"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
