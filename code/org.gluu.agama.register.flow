@@ -1,2 +1,3 @@
 Flow org.gluu.agama.register
      Basepath ""
+Log "@info start phone number registration flow"
