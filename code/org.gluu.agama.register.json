@@ -33,9 +33,10 @@
 					"logMessage": "\"start phone number registration flow\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 230,
@@ -106,7 +107,7 @@
 	],
 	"viewport": {
 		"x": 10,
-		"y": 270,
+		"y": 269,
 		"zoom": 0.75
 	}
 }
