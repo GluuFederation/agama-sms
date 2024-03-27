@@ -1,0 +1,35 @@
+[
+  {
+    "id": "Agama-start-Flow-d0156bbd-c521-4bca-95ac-4d12075717d6",
+    "type": "start",
+    "sourcePosition": "right",
+    "data": {
+      "id": "Agama-start-Flow-d0156bbd-c521-4bca-95ac-4d12075717d6",
+      "type": "Agama-start-Flow",
+      "position": {
+        "x": 30,
+        "y": 30
+      },
+      "inRepeatBlock": false,
+      "agamaData": {
+        "id": "Agama-start-Flow-d0156bbd-c521-4bca-95ac-4d12075717d6",
+        "type": "Agama-start-Flow",
+        "displayName": "Register Phone Number",
+        "hasComment": true,
+        "comment": "",
+        "isTopLevelFlow": true,
+        "basepath": "",
+        "configParams": "{}",
+        "nodeIcon": "material-symbols:line-start-square",
+        "timeout": "",
+        "inputs": "",
+        "configs": "",
+        "flowname": "org.gluu.agama.register"
+      }
+    },
+    "position": {
+      "x": 30,
+      "y": 30
+    }
+  }
+]
