@@ -32,7 +32,7 @@
 					<label for="phoneNumber" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Enter phone number:</label>
 				  </div>
 				  <div>
-					<input type="text" id="phoneNumber" placeholder="+237697778845" required="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+					<input type="text" name="phoneNumber" id="phoneNumber" placeholder="+237697778845" required="" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2-5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
 				  </div>
 				</div>
 				<p id="helper-text-explanation" class="mt-2 mb-4 text-sm text-gray-500 dark:text-gray-400">We will send your OTP code to this phone number.
@@ -54,14 +54,12 @@
 	  form.onsubmit = handleFormValidation;
 	};
 	function handleFormValidation() {
-	  var phoneNumber = document.getElementById("phoneNumber").value
-	  if(phoneNumber === ''){
-		console.log("No phone number provided!")
+	  var userPhoneNumber = document.getElementById('phoneNumber').value
+	  if (userPhoneNumber === '') {
+		alert('Phone number is mandatory!')
 		return false
 	  }
-	  else{
-		return true
-	  }
+	  return true
 	}
   </script>
 </html>
