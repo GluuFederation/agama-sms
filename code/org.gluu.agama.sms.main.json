@@ -243,7 +243,7 @@
 				],
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 3192.836928061601,
@@ -493,7 +493,7 @@
 			"id": "Agama-when-Node-024191b2-8c1d-4e5b-9f36-a0619a6b4ab8",
 			"position": {
 				"x": 2880.621142641452,
-				"y": 921.5780402310345
+				"y": 920.2447068977012
 			},
 			"parentId": "Agama-log-Node-5224fa9b-5e4d-451d-a9f5-1d82b2f8df4b",
 			"type": "when",
@@ -506,7 +506,7 @@
 				"inIterateBlock": false,
 				"position": {
 					"x": 2880.621142641452,
-					"y": 921.5780402310345
+					"y": 920.2447068977012
 				},
 				"agamaData": {
 					"id": "Agama-when-Node-024191b2-8c1d-4e5b-9f36-a0619a6b4ab8",
@@ -514,7 +514,7 @@
 					"type": "Agama-when-Node",
 					"conditions": [
 						{
-							"variable": "username",
+							"variable": "otpFeedBack.success",
 							"operator": "is",
 							"dataValue": "true",
 							"combinator": "none"
@@ -534,7 +534,7 @@
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2880.621142641452,
-				"y": 921.5780402310345
+				"y": 920.2447068977012
 			}
 		},
 		{
@@ -1568,7 +1568,7 @@
 				"x": 30,
 				"y": 30
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 30,
@@ -2176,8 +2176,8 @@
 		}
 	],
 	"viewport": {
-		"x": 10,
-		"y": 270,
-		"zoom": 0.75
+		"x": -994.3777027205879,
+		"y": 12.086581355029239,
+		"zoom": 0.6350589842718954
 	}
 }
