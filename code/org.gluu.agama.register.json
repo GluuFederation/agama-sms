@@ -1,35 +1,112 @@
-[
-  {
-    "id": "Agama-start-Flow-d0156bbd-c521-4bca-95ac-4d12075717d6",
-    "type": "start",
-    "sourcePosition": "right",
-    "data": {
-      "id": "Agama-start-Flow-d0156bbd-c521-4bca-95ac-4d12075717d6",
-      "type": "Agama-start-Flow",
-      "position": {
-        "x": 30,
-        "y": 30
-      },
-      "inRepeatBlock": false,
-      "agamaData": {
-        "id": "Agama-start-Flow-d0156bbd-c521-4bca-95ac-4d12075717d6",
-        "type": "Agama-start-Flow",
-        "displayName": "Register Phone Number",
-        "hasComment": true,
-        "comment": "",
-        "isTopLevelFlow": true,
-        "basepath": "",
-        "configParams": "{}",
-        "nodeIcon": "material-symbols:line-start-square",
-        "timeout": "",
-        "inputs": "",
-        "configs": "",
-        "flowname": "org.gluu.agama.register"
-      }
-    },
-    "position": {
-      "x": 30,
-      "y": 30
-    }
-  }
-]
+{
+	"nodes": [
+		{
+			"width": 170,
+			"height": 124,
+			"id": "Agama-log-Node-20e1b3a8-b65b-4404-a9c0-905730048474",
+			"position": {
+				"x": 230,
+				"y": 30
+			},
+			"type": "log",
+			"data": {
+				"id": "Agama-log-Node-20e1b3a8-b65b-4404-a9c0-905730048474",
+				"type": "Agama-log-Node",
+				"parentId": "Agama-start-Flow-d0156bbd-c521-4bca-95ac-4d12075717d6",
+				"whenCondition": "WhenFalse",
+				"inRepeatBlock": false,
+				"inIterateBlock": false,
+				"position": {
+					"x": 230,
+					"y": 30
+				},
+				"agamaData": {
+					"id": "Agama-log-Node-20e1b3a8-b65b-4404-a9c0-905730048474",
+					"parentId": "Agama-start-Flow-d0156bbd-c521-4bca-95ac-4d12075717d6",
+					"type": "Agama-log-Node",
+					"displayName": "Phone registration",
+					"hasComment": true,
+					"comment": "",
+					"whenCondition": "WhenFalse",
+					"inRepeatBlock": false,
+					"inIterateBlock": false,
+					"logMessage": "\"start phone number registration flow\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16"
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 230,
+				"y": 30
+			}
+		},
+		{
+			"width": 170,
+			"height": 124,
+			"id": "Agama-start-Flow-d0156bbd-c521-4bca-95ac-4d12075717d6",
+			"type": "start",
+			"sourcePosition": "right",
+			"data": {
+				"id": "Agama-start-Flow-d0156bbd-c521-4bca-95ac-4d12075717d6",
+				"type": "Agama-start-Flow",
+				"position": {
+					"x": 30,
+					"y": 30
+				},
+				"inRepeatBlock": false,
+				"agamaData": {
+					"id": "Agama-start-Flow-d0156bbd-c521-4bca-95ac-4d12075717d6",
+					"type": "Agama-start-Flow",
+					"displayName": "Register Phone Number",
+					"hasComment": true,
+					"comment": "",
+					"isTopLevelFlow": true,
+					"basepath": "",
+					"configParams": "{ }",
+					"nodeIcon": "material-symbols:line-start-square",
+					"timeout": "",
+					"inputs": "",
+					"configs": "",
+					"flowname": "org.gluu.agama.register"
+				},
+				"skake": false
+			},
+			"position": {
+				"x": 30,
+				"y": 30
+			},
+			"selected": false,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 30,
+				"y": 30
+			}
+		}
+	],
+	"edges": [
+		{
+			"id": "Agama-start-Flow-d0156bbd-c521-4bca-95ac-4d12075717d6-Agama-log-Node-20e1b3a8-b65b-4404-a9c0-905730048474-11374cbf-5cae-48a2-b64e-583c6b7a43e1",
+			"type": "default",
+			"source": "Agama-start-Flow-d0156bbd-c521-4bca-95ac-4d12075717d6",
+			"target": "Agama-log-Node-20e1b3a8-b65b-4404-a9c0-905730048474",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#bee0d2",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			}
+		}
+	],
+	"viewport": {
+		"x": 10,
+		"y": 270,
+		"zoom": 0.75
+	}
+}
