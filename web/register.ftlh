@@ -18,7 +18,7 @@
 		<div class="max-w-sm mx-auto md:max-w-lg">
 		  <div class="w-full">
 			<div class="bg-white h-full py-4 rounded text-center">
-			  <form method="post" class="my-8">
+			  <form method="post" class="max-w-sm mx-auto my-8">
 				<h1 class="text-2xl font-bold">Phone Registration
 				</h1>
 				<div class="flex flex-col mt-4">
