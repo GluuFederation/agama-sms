@@ -1,6 +1,56 @@
 {
 	"nodes": [
 		{
+			"width": 227,
+			"height": 30,
+			"id": "Agama-note-2e9cbe7b-b67d-4fba-a586-e99b7d86e4d7",
+			"position": {
+				"x": 2980.5883951696046,
+				"y": 206.16649378578973
+			},
+			"type": "notes",
+			"data": {
+				"id": "Agama-note-2e9cbe7b-b67d-4fba-a586-e99b7d86e4d7",
+				"type": "Agama-note",
+				"notes": "Call OTP verification flow.",
+				"position": {
+					"x": 2980.5883951696046,
+					"y": 206.16649378578973
+				}
+			},
+			"selected": false,
+			"positionAbsolute": {
+				"x": 2980.5883951696046,
+				"y": 206.16649378578973
+			},
+			"dragging": false
+		},
+		{
+			"width": 234,
+			"height": 30,
+			"id": "Agama-note-be07e633-e121-49a6-9c93-c37e27df4406",
+			"position": {
+				"x": 2375.1999067902116,
+				"y": 208.02615200759033
+			},
+			"type": "notes",
+			"data": {
+				"id": "Agama-note-be07e633-e121-49a6-9c93-c37e27df4406",
+				"type": "Agama-note",
+				"notes": "Call phone registration flow",
+				"position": {
+					"x": 2375.1999067902116,
+					"y": 208.02615200759033
+				}
+			},
+			"selected": false,
+			"positionAbsolute": {
+				"x": 2375.1999067902116,
+				"y": 208.02615200759033
+			},
+			"dragging": false
+		},
+		{
 			"width": 170,
 			"height": 124,
 			"id": "finish-cd56f15d-7b93-432b-9c6c-f0fa9187d836",
@@ -2072,8 +2122,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1096,
-		"y": -58,
-		"zoom": 0.75
+		"x": -559.8224583267062,
+		"y": 102.90727058036765,
+		"zoom": 0.5377332180059352
 	}
 }
