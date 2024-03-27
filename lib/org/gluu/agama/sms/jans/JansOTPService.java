@@ -81,7 +81,7 @@ public class JansOTPService extends OTPService {
     public boolean registerPhone(String username, String phoneNumber) {
         try {
             logger.info("Registering phone {} for user  {}.", phoneNumber, username);
-            User user =getUser(USERNAME,username);
+            User user = getUser(USERNAME,username);
             user.setAttribute(PHONE,phoneNumber,false);
             user.setAttribute(MOBILE,phoneNumber,false);
             if(user != null){
@@ -92,7 +92,7 @@ public class JansOTPService extends OTPService {
             }
             return false;
         } catch (Exception exception) {
-            logger.info("OTP code {} provided by {} is not valid. Error: {} ", code, username, exception);
+            logger.info("Error updating user {} phone number. Error: {} ", username, exception);
             return false;
         }
     }
