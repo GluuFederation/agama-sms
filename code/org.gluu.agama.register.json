@@ -262,7 +262,7 @@
 					"assignments": [],
 					"nodeIcon": "ph:globe-simple",
 					"templatePath": "register.ftlh",
-					"asssignedVariableName": "phoneNumber",
+					"asssignedVariableName": "registrationResult",
 					"arguments": [
 						"phoneUiFeedback"
 					]
@@ -666,8 +666,8 @@
 		}
 	],
 	"viewport": {
-		"x": 10,
-		"y": 270,
+		"x": -112,
+		"y": 82,
 		"zoom": 0.75
 	}
 }
