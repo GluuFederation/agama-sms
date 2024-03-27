@@ -31,20 +31,33 @@ count = Repeat 3 times max
                // OTP Code validation is completed.
                Log "@info OTP Code validation completed with status: " otpFeedBack
                // Check if OTP validation vas okay
-               When otpFeedBack.success is true
+               When username is true
                     // The main flow has completed successfully.
-                    it_yfasr = {success:true, data: { userId: credentials.username}}
-                    Finish it_yfasr
+                    it_bflag = {success:true, data: { userId: credentials.username}}
+                    Finish it_bflag
                Otherwise
                     // Closing the main flow with error.
-                    it_cbmim = {success:false, error: "Your error message here"}
-                    Finish it_cbmim
+                    it_cfohm = {success:false, error: "Your error message here"}
+                    Finish it_cfohm
           Otherwise
                // TP Code validation is completed.
                Log "@info The following user don't has a phone number : " username
+               // Launch phone number registration subflow.
                phoneRegistration = Trigger org.gluu.agama.register username
                // Log phone registration result
                Log "@info Phone number registration done"
+               maskedPhone = Call otpService sendOTPCode credentials.username
+               // Trigger OTP subflow
+               otpFeedBack | otpException = Trigger org.gluu.agama.sms.otp username maskedPhone
+               // Check if OTP validation is okay
+               When otpFeedBack.success is true
+                    // The main flow has completed successfully.
+                    it_ntwdd = {success:true, data: { userId: credentials.username}}
+                    Finish it_ntwdd
+               Otherwise
+                    // Closing the main flow with error.
+                    it_mnjhr = {success:false, error: "The flow has been completed with error."}
+                    Finish it_mnjhr
      // Invalid credentials provided.
      Log "@error Invalid credentials provided."
      // Provide feedback about the error message to user.
@@ -52,5 +65,5 @@ count = Repeat 3 times max
 // Maximum attempts reached. Password validation failed!
 Log "@info Maximum attempts reached. Password validation failed!"
 // Maximum attempts reached. Password validation failed!
-it_eobrt = {success:false, error: "Password validation failed!"}
-Finish it_eobrt
+it_gctdj = {success:false, error: "Password validation failed!"}
+Finish it_gctdj
