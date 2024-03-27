@@ -1,7 +1,7 @@
 Flow org.gluu.agama.register
      Basepath ""
      Timeout 200 seconds
-     Inputs otpService username
+     Inputs otpService username phoneNumber
 Log "@info start phone number registration flow"
 phoneUiFeedback = {}
 phoneUiFeedback.username = username
