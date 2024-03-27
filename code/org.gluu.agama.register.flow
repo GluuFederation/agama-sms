@@ -1,9 +1,14 @@
 Flow org.gluu.agama.register
      Basepath ""
+     Timeout 700 seconds
+     Inputs otpService username
 Log "@info start phone number registration flow"
 phoneUiFeedback = {}
 Repeat 3 times max
      // Retrieve user phone number from UI.
      phoneNumber = RRF "register.ftlh" phoneUiFeedback
      // Log the phone number
-     Log "@info Phone number collected": phoneNumber
+     Log "@info Phone number collected:"  phoneNumber
+     // Register user phone number
+     phoneRegistrationResult = Call otpService registerPhone username phoneNumber
+     Finish phoneRegistrationResult
