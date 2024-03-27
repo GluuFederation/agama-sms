@@ -3,6 +3,245 @@
 		{
 			"width": 170,
 			"height": 124,
+			"id": "finish-cd56f15d-7b93-432b-9c6c-f0fa9187d836",
+			"position": {
+				"x": 3312.836928061601,
+				"y": -46.549759763099814
+			},
+			"type": "finish",
+			"data": {
+				"id": "finish-cd56f15d-7b93-432b-9c6c-f0fa9187d836",
+				"type": "Agama-finish-Flow",
+				"parentId": "Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929",
+				"whenCondition": "Otherwise",
+				"inRepeatBlock": false,
+				"inIterateBlock": false,
+				"handles": [
+					"Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929.FAILURE",
+					"Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929.SUCCESS",
+					"Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929.OTHERWISE"
+				],
+				"position": {
+					"x": 3312.836928061601,
+					"y": -46.549759763099814
+				},
+				"agamaData": {
+					"id": "finish-cd56f15d-7b93-432b-9c6c-f0fa9187d836",
+					"parentId": "Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929",
+					"type": "Agama-finish-Flow",
+					"hasSuccess": false,
+					"hasFailure": false,
+					"hasComment": true,
+					"comment": "Closing the main flow with error.",
+					"flowfilename": "",
+					"returnVariable": "The flow has been completed with error.",
+					"finishMode": "withFailure",
+					"nodeIcon": "material-symbols:line-end-square-rounded",
+					"displayName": "Closing the flow with error"
+				}
+			},
+			"selected": false,
+			"positionAbsolute": {
+				"x": 3312.836928061601,
+				"y": -46.549759763099814
+			},
+			"dragging": false
+		},
+		{
+			"width": 170,
+			"height": 124,
+			"id": "finish-70c2ecd2-f858-407e-aefc-c253e431de09",
+			"position": {
+				"x": 3331.836928061601,
+				"y": 534.4502402369002
+			},
+			"type": "finish",
+			"data": {
+				"id": "finish-70c2ecd2-f858-407e-aefc-c253e431de09",
+				"type": "Agama-finish-Flow",
+				"parentId": "Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929",
+				"whenCondition": "WhenTrue",
+				"inRepeatBlock": false,
+				"inIterateBlock": false,
+				"handles": [
+					"Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929.FAILURE",
+					"Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929.SUCCESS",
+					"Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929.OTHERWISE"
+				],
+				"position": {
+					"x": 3331.836928061601,
+					"y": 534.4502402369002
+				},
+				"agamaData": {
+					"id": "finish-70c2ecd2-f858-407e-aefc-c253e431de09",
+					"parentId": "Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929",
+					"type": "Agama-finish-Flow",
+					"hasSuccess": false,
+					"hasFailure": false,
+					"hasComment": true,
+					"comment": "The main flow has completed successfully.",
+					"flowfilename": "",
+					"returnVariable": "{ userId: credentials.username}",
+					"finishMode": "withSuccess",
+					"nodeIcon": "material-symbols:line-end-square-rounded",
+					"displayName": "Closing the flow successfully"
+				}
+			},
+			"selected": false,
+			"positionAbsolute": {
+				"x": 3331.836928061601,
+				"y": 534.4502402369002
+			},
+			"dragging": false
+		},
+		{
+			"width": 110,
+			"height": 60,
+			"id": "Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929",
+			"position": {
+				"x": 3192.836928061601,
+				"y": 310.4502402369002
+			},
+			"parentId": "Agama-trigger-Node-5593b3f4-b10b-484a-ac71-6741d3e2fc96",
+			"type": "when",
+			"data": {
+				"id": "Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929",
+				"type": "Agama-when-Node",
+				"parentId": "Agama-trigger-Node-5593b3f4-b10b-484a-ac71-6741d3e2fc96",
+				"whenCondition": "WhenFalse",
+				"inRepeatBlock": false,
+				"inIterateBlock": false,
+				"position": {
+					"x": 3192.836928061601,
+					"y": 310.4502402369002
+				},
+				"agamaData": {
+					"id": "Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929",
+					"parentId": "Agama-trigger-Node-5593b3f4-b10b-484a-ac71-6741d3e2fc96",
+					"type": "Agama-when-Node",
+					"conditions": [
+						{
+							"variable": "otpFeedBack.success",
+							"operator": "is",
+							"dataValue": "true",
+							"combinator": "none"
+						}
+					],
+					"comment": "Check if OTP validation is okay",
+					"hasComment": true,
+					"inRepeatBlock": false
+				},
+				"handles": [
+					"Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929.FAILURE",
+					"Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929.SUCCESS"
+				]
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 3192.836928061601,
+				"y": 310.4502402369002
+			}
+		},
+		{
+			"width": 170,
+			"height": 124,
+			"id": "Agama-trigger-Node-5593b3f4-b10b-484a-ac71-6741d3e2fc96",
+			"position": {
+				"x": 2992.836928061601,
+				"y": 256.4502402369002
+			},
+			"type": "trigger",
+			"data": {
+				"id": "Agama-trigger-Node-5593b3f4-b10b-484a-ac71-6741d3e2fc96",
+				"type": "Agama-trigger-Node",
+				"parentId": "Agama-call-Node-fb1da96a-35e0-4b1c-b6a9-10ce272fa27e",
+				"whenCondition": "WhenFalse",
+				"inRepeatBlock": false,
+				"inIterateBlock": false,
+				"position": {
+					"x": 2992.836928061601,
+					"y": 256.4502402369002
+				},
+				"agamaData": {
+					"id": "Agama-trigger-Node-5593b3f4-b10b-484a-ac71-6741d3e2fc96",
+					"parentId": "Agama-call-Node-fb1da96a-35e0-4b1c-b6a9-10ce272fa27e",
+					"type": "Agama-trigger-Node",
+					"displayName": "Trigger OTP subflow",
+					"hasComment": true,
+					"comment": "Trigger OTP subflow",
+					"whenCondition": "WhenFalse",
+					"inRepeatBlock": false,
+					"inIterateBlock": false,
+					"nodeIcon": "fluent-mdl2:trigger-approval",
+					"flowFileName": "org.gluu.agama.sms.otp",
+					"arguments": [
+						"username",
+						"maskedPhone"
+					],
+					"asssignedVariableName": "otpFeedBack",
+					"exceptionVariableField": "otpException"
+				}
+			},
+			"selected": false,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 2992.836928061601,
+				"y": 256.4502402369002
+			}
+		},
+		{
+			"width": 170,
+			"height": 124,
+			"id": "Agama-call-Node-fb1da96a-35e0-4b1c-b6a9-10ce272fa27e",
+			"position": {
+				"x": 2792.836928061601,
+				"y": 256.4502402369002
+			},
+			"type": "call",
+			"data": {
+				"id": "Agama-call-Node-fb1da96a-35e0-4b1c-b6a9-10ce272fa27e",
+				"type": "Agama-call-Node",
+				"parentId": "Agama-log-Node-6e75b200-2375-4fcc-bb0d-bdb47762a92c",
+				"whenCondition": "WhenFalse",
+				"inRepeatBlock": false,
+				"inIterateBlock": false,
+				"position": {
+					"x": 2792.836928061601,
+					"y": 256.4502402369002
+				},
+				"agamaData": {
+					"id": "Agama-call-Node-fb1da96a-35e0-4b1c-b6a9-10ce272fa27e",
+					"parentId": "Agama-log-Node-6e75b200-2375-4fcc-bb0d-bdb47762a92c",
+					"type": "Agama-call-Node",
+					"displayName": "Send OTP Code to user",
+					"hasComment": true,
+					"comment": "",
+					"javaClassName": "",
+					"javaMethodName": "sendOTPCode",
+					"javaVariableName": "otpService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"whenCondition": "WhenFalse",
+					"inRepeatBlock": false,
+					"inIterateBlock": false,
+					"arguments": [
+						"credentials.username"
+					],
+					"nodeIcon": "material-symbols:code",
+					"asssignedVariableName": "maskedPhone"
+				}
+			},
+			"selected": false,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 2792.836928061601,
+				"y": 256.4502402369002
+			}
+		},
+		{
+			"width": 170,
+			"height": 124,
 			"id": "Agama-log-Node-6e75b200-2375-4fcc-bb0d-bdb47762a92c",
 			"position": {
 				"x": 2592.836928061601,
@@ -33,9 +272,10 @@
 					"logMessage": "\"Phone number registration done\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2592.836928061601,
@@ -165,7 +405,7 @@
 					"type": "Agama-when-Node",
 					"conditions": [
 						{
-							"variable": "otpFeedBack.success",
+							"variable": "username",
 							"operator": "is",
 							"dataValue": "true",
 							"combinator": "none"
@@ -214,7 +454,7 @@
 					"type": "Agama-trigger-Node",
 					"displayName": "Phone Registration",
 					"hasComment": true,
-					"comment": "",
+					"comment": "Launch phone number registration subflow.",
 					"whenCondition": "WhenFalse",
 					"inRepeatBlock": false,
 					"inIterateBlock": false,
@@ -519,8 +759,8 @@
 			"height": 55,
 			"id": "Agama-note-a05e5857-db97-4a88-aacf-33d70ed86be5",
 			"position": {
-				"x": 1343,
-				"y": 451
+				"x": 1335.097043751283,
+				"y": 412.6142125062321
 			},
 			"type": "notes",
 			"data": {
@@ -528,15 +768,15 @@
 				"type": "Agama-note",
 				"notes": "The provided credentials is valid. So next step is to send OTP code to the user mobile phone.",
 				"position": {
-					"x": 1343,
-					"y": 451
+					"x": 1335.097043751283,
+					"y": 412.6142125062321
 				},
 				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
-				"x": 1343,
-				"y": 451
+				"x": 1335.097043751283,
+				"y": 412.6142125062321
 			},
 			"dragging": false
 		},
@@ -1736,11 +1976,98 @@
 				"color": "#ffffff",
 				"fillOpacity": 0.7
 			}
+		},
+		{
+			"id": "Agama-log-Node-6e75b200-2375-4fcc-bb0d-bdb47762a92c-Agama-call-Node-fb1da96a-35e0-4b1c-b6a9-10ce272fa27e-0843b915-2272-44c2-b630-78e88dbfa8f1",
+			"type": "default",
+			"source": "Agama-log-Node-6e75b200-2375-4fcc-bb0d-bdb47762a92c",
+			"target": "Agama-call-Node-fb1da96a-35e0-4b1c-b6a9-10ce272fa27e",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#bee0d2",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			}
+		},
+		{
+			"id": "Agama-call-Node-fb1da96a-35e0-4b1c-b6a9-10ce272fa27e-Agama-trigger-Node-5593b3f4-b10b-484a-ac71-6741d3e2fc96-5051a4d0-0efc-4663-9354-dba63fc5b288",
+			"type": "default",
+			"source": "Agama-call-Node-fb1da96a-35e0-4b1c-b6a9-10ce272fa27e",
+			"target": "Agama-trigger-Node-5593b3f4-b10b-484a-ac71-6741d3e2fc96",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#bee0d2",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			}
+		},
+		{
+			"id": "Agama-trigger-Node-5593b3f4-b10b-484a-ac71-6741d3e2fc96-Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929-71ab95d7-4f4d-4c4e-9699-2196e52b33e0",
+			"type": "default",
+			"source": "Agama-trigger-Node-5593b3f4-b10b-484a-ac71-6741d3e2fc96",
+			"target": "Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#bee0d2",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			}
+		},
+		{
+			"id": "Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929-finish-70c2ecd2-f858-407e-aefc-c253e431de09-fa2ef1ff-3cd0-4717-8d7b-54161b153952",
+			"type": "default",
+			"source": "Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929",
+			"target": "finish-70c2ecd2-f858-407e-aefc-c253e431de09",
+			"label": "Condition met",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#bee0d2",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929.SUCCESS"
+		},
+		{
+			"id": "Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929-finish-cd56f15d-7b93-432b-9c6c-f0fa9187d836-09c82775-fda9-4ebd-ab9f-bc17a51435e9",
+			"type": "default",
+			"source": "Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929",
+			"target": "finish-cd56f15d-7b93-432b-9c6c-f0fa9187d836",
+			"label": "Otherwise",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#bee0d2",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "Agama-when-Node-e71026cd-e4c8-4d12-bcf4-29964c73d929.OTHERWISE"
 		}
 	],
 	"viewport": {
-		"x": -1626.0303629711939,
-		"y": -162.9261105576511,
-		"zoom": 0.8857444960721479
+		"x": -645.3669980947352,
+		"y": 108.30443857112294,
+		"zoom": 0.5
 	}
 }
