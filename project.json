@@ -3,7 +3,7 @@
     "description": "OTP authentication with SMS",
     "type": "community",
     "author": "syntrydy",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "authorWebsite": "https://github.com/GluuFederation/agama-sms",
     "githubUri": "https://github.com/GluuFederation/agama-sms",
     "license": "apache-2.0",
