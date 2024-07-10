@@ -33,7 +33,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "Invalide phone number",
+							"assignmentExpression": "Invalid phone number",
 							"assignedVariableName": "phoneUiFeedback.errorMessage"
 						}
 					],
@@ -45,7 +45,7 @@
 				"x": 970,
 				"y": 8
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -666,8 +666,8 @@
 		}
 	],
 	"viewport": {
-		"x": 175.03305621345976,
-		"y": 158.75651755967948,
-		"zoom": 0.5
+		"x": -191,
+		"y": 255,
+		"zoom": 0.75
 	}
 }
