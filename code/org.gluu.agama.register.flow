@@ -15,4 +15,4 @@ Repeat 3 times max
      Finish phoneRegistrationResult
 // Max number of attemps has been reached.
 Log "@info Max number of attemps has been reached."
-phoneUiFeedback.errorMessage = "Invalide phone number"
+phoneUiFeedback.errorMessage = "Invalid phone number"
