@@ -34,12 +34,12 @@ count = Repeat 3 times max
                // Check if OTP validation vas okay
                When otpFeedBack.success is true
                     // The main flow has completed successfully.
-                    it_wizqn = {success:true, data: { userId: credentials.username}}
-                    Finish it_wizqn
+                    it_fezdi = {success:true, data: { userId: credentials.username}}
+                    Finish it_fezdi
                Otherwise
                     // Closing the main flow with error.
-                    it_kloaf = {success:false, error: "Your error message here"}
-                    Finish it_kloaf
+                    it_kfvee = {success:false, error: "Your error message here"}
+                    Finish it_kfvee
           Otherwise
                // TP Code validation is completed.
                Log "@info The following user don't has a phone number : " username
@@ -53,12 +53,12 @@ count = Repeat 3 times max
                // Check if OTP validation is okay
                When otpFeedBack.success is true
                     // The main flow has completed successfully.
-                    it_rwbog = {success:true, data: { userId: credentials.username}}
-                    Finish it_rwbog
+                    it_opbaq = {success:true, data: { userId: credentials.username}}
+                    Finish it_opbaq
                Otherwise
                     // Closing the main flow with error.
-                    it_xxejg = {success:false, error: "The flow has been completed with error."}
-                    Finish it_xxejg
+                    it_fxrgb = {success:false, error: "The flow has been completed with error."}
+                    Finish it_fxrgb
      // Invalid credentials provided.
      Log "@error Invalid credentials provided."
      // Provide feedback about the error message to user.
@@ -66,5 +66,5 @@ count = Repeat 3 times max
 // Maximum attempts reached. Password validation failed!
 Log "@info Maximum attempts reached. Password validation failed!"
 // Maximum attempts reached. Password validation failed!
-it_trzyd = {success:false, error: "Password validation failed!"}
-Finish it_trzyd
+it_ukwvz = {success:false, error: "Password validation failed!"}
+Finish it_ukwvz
