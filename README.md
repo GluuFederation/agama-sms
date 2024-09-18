@@ -32,7 +32,7 @@ The steps below show how the Agama-SMS project can be deployed on the
 
 Deployment of an Agama project involves three steps.
 
-- [Downloading the `.gama` package from project repository](#download-the-project)
+- [Downloading the `.gama` package from the project repository](#download-the-project)
 - [Adding the `.gama` package to the IAM server](#add-the-project-to-the-server)
 - [Configure the project](#configure-the-project)
 
@@ -88,9 +88,9 @@ Sample JSON:
 
 | Flow | Property | Value Description |
 | ------------- | ------------- |----------------------- |
-| org.gluu.agama.sms.main | ACCOUNT_SID | Your twilio ACCOUNT_SID (available in your twilio account settings page)|
-| org.gluu.agama.sms.main | AUTH_TOKEN | Your twilio AUTH_TOKEN (available in your twilio account settings page)|
-| org.gluu.agama.sms.main | FROM_NUMBER | Your twilio FROM_NUMBER (available in your twilio account settings page)|
+| org.gluu.agama.sms.main | ACCOUNT_SID | Your Twilio ACCOUNT_SID (available in your Twilio account settings page)|
+| org.gluu.agama.sms.main | AUTH_TOKEN | Your Twilio AUTH_TOKEN (available in your Twilio account settings page)|
+| org.gluu.agama.sms.main | FROM_NUMBER | Your Twilio FROM_NUMBER (available in your Twilio account settings page)|
 
 
 ### Test The Flow
@@ -102,7 +102,7 @@ From the incoming authentication request, the Janssen Server reads the `ACR`
 parameter value to identify which authentication method should be used. 
 To invoke the `org.gluu.agama.sms.main` flow contained in the Agama-sms project,
 specify the ACR value as `agama_<qualified-name-of-the-top-level-flow>`, 
-i.e  `agama_org.gluu.agama.sms.main`.
+i.e `agama_org.gluu.agama.sms.main`.
 
 
 
@@ -111,12 +111,12 @@ i.e  `agama_org.gluu.agama.sms.main`.
 Fork this repo to start customizing the Agama-SMS project. It is possible to 
 customize the user interface provided by the flow to suit your organization's 
 branding 
-guidelines. Or customize the overall flow behavior. Follow the best 
+guidelines. Or customize the overall flow behavior. Follow the best
 practices and steps listed 
 [here](https://docs.jans.io/head/admin/developer/agama/agama-best-practices/#project-reuse-and-customizations) 
 to achieve these customizations in the best possible way. 
-This project can be reused in other Agama projects to create more complex  
-authentication journeys. To reuse, trigger the 
+This project can be reused in other Agama projects to create more complex 
+authentication journeys. To reuse trigger the 
 [org.gluu.agama.sms.main](#flows-in-the-project) flow from other Agama projects.
 
 To make it easier to visualize and customize the Agama Project, use
@@ -127,9 +127,9 @@ To make it easier to visualize and customize the Agama Project, use
 
 | Qualified Name| Description |
 | ------------- | ------------- |
-| org.gluu.agama.sms.main | This is the main flow, it controls the first factor of the authentication and triggers the second factor.|
-| org.gluu.agama.sms.otp | This flow collect OTP code from user and perform validation. When validation is done the result is send back to the main flow.|
-| org.gluu.agama.sms.register| This flow is use to register user's phone number if the phone number is not setup.|
+| org.gluu.agama.sms.main | This is the main flow; it controls the first factor of the authentication and triggers the second factor.|
+| org.gluu.agama.sms.otp | This flow collects an OTP code from the user and performs validation. When validation is done, the result is sent back to the main flow.|
+| org.gluu.agama.sms.register| This flow is used to register the user's phone number if the phone number is not setup.|
 
 
 
@@ -142,7 +142,7 @@ series for a quick demo on this flow.
 
 *Note:*
 While the video shows how the flow works overall, it may be dated. Do check the
-[Test The Flow](#test-the-flow) section to understand the current
+[Test the Flow](#test-the-flow) section to understand the current
 method of passing the ACR parameter when invoking the flow.
 
 <!-- This are stats url reference for this repository -->
