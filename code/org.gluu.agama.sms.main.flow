@@ -5,7 +5,7 @@ Flow org.gluu.agama.sms.main
      Configs conf
 // Create variable to receive validation result.
 validationResult = {}
-// Get an instance of OTPService Class. 
+// Get an instance of OTPService Class.
 otpService = Call org.gluu.agama.sms.OTPService#getInstance conf
 // Iterate x times maximum.
 count = Repeat 3 times max
@@ -34,12 +34,12 @@ count = Repeat 3 times max
                // Check if OTP validation vas okay
                When otpFeedBack.success is true
                     // The main flow has completed successfully.
-                    it_zjunl = {success:true, data: { userId: credentials.username}}
-                    Finish it_zjunl
+                    it_yvepg = {success:true, data: { userId: credentials.username}}
+                    Finish it_yvepg
                Otherwise
                     // Closing the main flow with error.
-                    it_biixn = {success:false, error: "Your error message here"}
-                    Finish it_biixn
+                    it_hqmjv = {success:false, error: "Your error message here"}
+                    Finish it_hqmjv
           Otherwise
                // TP Code validation is completed.
                Log "@info The following user don't has a phone number : " username
@@ -53,12 +53,12 @@ count = Repeat 3 times max
                // Check if OTP validation is okay
                When otpFeedBack.success is true
                     // The main flow has completed successfully.
-                    it_vxfnh = {success:true, data: { userId: credentials.username}}
-                    Finish it_vxfnh
+                    it_nsaam = {success:true, data: { userId: credentials.username}}
+                    Finish it_nsaam
                Otherwise
                     // Closing the main flow with error.
-                    it_asozu = {success:false, error: "The flow has been completed with error."}
-                    Finish it_asozu
+                    it_igzce = {success:false, error: "The flow has been completed with error."}
+                    Finish it_igzce
      // Invalid credentials provided.
      Log "@error Invalid credentials provided."
      // Provide feedback about the error message to user.
@@ -66,5 +66,5 @@ count = Repeat 3 times max
 // Maximum attempts reached. Password validation failed!
 Log "@info Maximum attempts reached. Password validation failed!"
 // Maximum attempts reached. Password validation failed!
-it_tqdlq = {success:false, error: "Password validation failed!"}
-Finish it_tqdlq
+it_ardme = {success:false, error: "Password validation failed!"}
+Finish it_ardme
