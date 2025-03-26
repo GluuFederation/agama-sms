@@ -92,6 +92,35 @@ Sample JSON:
 | org.gluu.agama.sms.main | AUTH_TOKEN | Your Twilio AUTH_TOKEN (available in your Twilio account settings page)|
 | org.gluu.agama.sms.main | FROM_NUMBER | Your Twilio FROM_NUMBER (available in your Twilio account settings page)|
 
+### How it works at a glance
+
+```mermaid
+sequenceDiagram
+    title 2FA Flow (Username/Password + SMS via Twilio)
+
+    participant browser as Browser
+    participant server as Server
+    participant twilio as Twilio SMS
+
+    autonumber
+    browser->>server: Submit Username & Password
+    server->>server: Validate Credentials
+    alt Valid Credentials
+        server->>server: Generate OTP (Store in Cache)
+        server->>twilio: Send OTP via SMS (Twilio API)
+        twilio->>browser: Deliver SMS with OTP
+        browser->>server: Submit OTP
+        server->>server: Validate OTP
+        alt Valid OTP
+            server->>server: Create Session/JWT
+            server->>browser: Redirect to Dashboard
+        else Invalid/Expired OTP
+            server->>browser: Show "Invalid OTP" Error
+        end
+    else Invalid Credentials
+        server->>browser: Show "Invalid Credentials" Error
+    end
+```
 
 ### Test The Flow
 
