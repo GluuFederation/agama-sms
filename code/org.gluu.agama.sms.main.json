@@ -5,7 +5,7 @@
 				"agamaData": {
 					"isTopLevelFlow": true,
 					"basepath": "",
-					"configParams": "{\n  \"ACCOUNT_SID\": \"PUT_YOUR_TWILIO_ACCOUNT_SID_HERE\",\n  \"AUTH_TOKEN\": \"PUT_YOUR_TWILIO_AUTH_TOKEN_HERE\",\n  \"FROM_NUMBER\": \"PUT_YOUR_TWILIO_FROM_NUMBER_HERE\"\n}",
+					"configParams": "{\n  \"ACCOUNT_SID\": \"PUT_YOUR_TWILIO_ACCOUNT_SID_HERE\",\n  \"AUTH_TOKEN\": \"PUT_YOUR_TWILIO_AUTH_TOKEN_HERE\",\n  \"FROM_NUMBER\": \"PUT_YOUR_TWILIO_FROM_NUMBER_HERE\",\n  \"TWILIO_SMS\": \"SELECT_WHICH_SMS_SERVICE\",\n  \"VONAGE_SMS\": \"SELECT_WHICH_SMS_SERVICE\"\n}",
 					"creationDate": "22/11/2024",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "700",
@@ -32,7 +32,9 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true,
+			"deletable": false
 		},
 		{
 			"data": {
