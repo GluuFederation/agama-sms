@@ -166,12 +166,12 @@ public class JansOTPService extends OTPService {
         }
     }
 
-    private boolean sendVonageSms(String userName, String phone, String message) {
+    private boolean sendVonageSms(String userName, String phone, String messageBody) {
         try {
             VonageClient client = VonageClient.builder().apiKey(flowConfig.get("ACCOUNT_SID")).apiSecret(flowConfig.get("AUTH_TOKEN")).build();
             TextMessage message = new TextMessage(flowConfig.get("FROM_NUMBER"),
                                     phone,
-                                    message
+                                    messageBody
                                     );
             
             SmsSubmissionResponse response = client.getSmsClient().submitMessage(message);
