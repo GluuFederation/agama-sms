@@ -54,11 +54,11 @@ public class JansOTPService extends OTPService {
     @Override
     public String sendOTPCode(String username) {
         try {
-            LogUtils.log("Sending OTP Code via SMS to %.", username);
+            LogUtils.log("Sending OTP Code via SMS to %", username);
             String phone = getUserPhoneNumber(username);
             String maskedPone = maskPhone(phone);
             String otpCode = generateOTpCode(OTP_CODE_LENGTH);
-            LogUtils.log("Generated OTP code is %.", otpCode);
+            LogUtils.log("Generated OTP code is %", otpCode);
             String message = "Hi " + username + ", Welcome to AgamaLab. This is your OTP Code to complete your login process: " + otpCode;
             associateGeneratedCodeToUser(username, otpCode);
             if(flowConfig.get("VONAGE_SMS")){
@@ -69,7 +69,7 @@ public class JansOTPService extends OTPService {
             
             return maskedPone;
         } catch (Exception exception) {
-            logger.error("Error occur while sending  OTP code via SMS to {}. Error {}.", username, exception);
+            LogUtils.log("Error occur while sending  OTP code via SMS to %. Error %.", username, exception);
             return null;
         }
     }
@@ -168,7 +168,7 @@ public class JansOTPService extends OTPService {
 
     private boolean sendVonageSms(String userName, String phone, String messageBody) {
         try {
-            LogUtils.log("SendVonage SMS function called");
+            LogUtils.log("Vonage SMS function called");
             VonageClient client = VonageClient.builder().apiKey(flowConfig.get("ACCOUNT_SID")).apiSecret(flowConfig.get("AUTH_TOKEN")).build();
             TextMessage message = new TextMessage(flowConfig.get("FROM_NUMBER"),
                                     phone,
@@ -180,7 +180,7 @@ public class JansOTPService extends OTPService {
             if (response.getMessages().get(0).getStatus() == MessageStatus.OK) {
                 LogUtils.log("OTP code has been successfully send to % on phone number % .", userName, phone);
             } else {
-                LogUtils.log("Message failed with error: %" + response.getMessages().get(0).getErrorText());
+                LogUtils.log("Message failed with error: %",response.getMessages().get(0).getErrorText());
             }
             
             return true;
