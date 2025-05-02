@@ -51,7 +51,7 @@ public class JansOTPService extends OTPService {
         return authenticationService.authenticate(username, password);
     }
 
-    @Override
+    
     public String sendOTPCode(String username) {
         try {
             LogUtils.log("Sending OTP Code via SMS to %", username);
