@@ -88,7 +88,7 @@
 						},
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "An OTP code has been send to you on your mobile phone.",
+							"assignmentExpression": "\"An OTP code has been send to you on your mobile phone.\"",
 							"assignedVariableName": "otpUiFeedback.infoMessage"
 						}
 					]
@@ -110,7 +110,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false
 		},
 		{
 			"data": {
@@ -433,7 +434,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "A new OTP code has been send to you on your mobile phone.",
+							"assignmentExpression": "\"A new OTP code has been send to you on your mobile phone.\"",
 							"assignedVariableName": "otpUiFeedback.infoMessage"
 						}
 					]
@@ -455,7 +456,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false
 		},
 		{
 			"data": {
@@ -497,7 +499,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "Error occurs while sending new code to you. Please contact site administrator.",
+							"assignmentExpression": "\"Error occurs while sending new code to you. Please contact site administrator.\"",
 							"assignedVariableName": "otpUiFeedback.infoMessage"
 						}
 					]
@@ -513,13 +515,15 @@
 			"type": "assignmentNode",
 			"id": "assignmentNode-d48270a6-ff5d-4223-a9eb-f105229eb2d0",
 			"position": {
-				"x": 2800,
-				"y": 700
+				"x": 2794,
+				"y": 626
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true,
+			"dragging": false
 		},
 		{
 			"data": {
@@ -661,7 +665,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "The provided code is not valid.",
+							"assignmentExpression": "\"The provided code is not valid.\"",
 							"assignedVariableName": "otpUiFeedback.errorMessage"
 						}
 					]
@@ -677,13 +681,15 @@
 			"type": "assignmentNode",
 			"id": "assignmentNode-cfd384df-127d-4f17-9398-c2d2a25b6056",
 			"position": {
-				"x": 2800,
-				"y": 700
+				"x": 2827,
+				"y": 760
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": false,
+			"dragging": false
 		},
 		{
 			"data": {
@@ -1118,8 +1124,8 @@
 		}
 	],
 	"viewport": {
-		"x": -221.3008704469962,
-		"y": 32.44319586962732,
-		"zoom": 0.5
+		"x": -2112,
+		"y": -307,
+		"zoom": 1
 	}
 }
