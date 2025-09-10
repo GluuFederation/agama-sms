@@ -169,7 +169,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "Invalid phone number",
+							"assignmentExpression": "\"Invalid phone number\"",
 							"assignedVariableName": "phoneUiFeedback.errorMessage"
 						}
 					]
@@ -191,7 +191,8 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true
 		},
 		{
 			"data": {
@@ -496,8 +497,8 @@
 		}
 	],
 	"viewport": {
-		"x": 0,
-		"y": 0,
+		"x": -321,
+		"y": -26,
 		"zoom": 1
 	}
 }
