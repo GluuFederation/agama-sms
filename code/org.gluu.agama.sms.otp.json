@@ -88,7 +88,7 @@
 						},
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "An OTP code has been send to you on your mobile phone.",
+							"assignmentExpression": "\"An OTP code has been send to you on your mobile phone.\"",
 							"assignedVariableName": "otpUiFeedback.infoMessage"
 						}
 					]
@@ -433,7 +433,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "A new OTP code has been send to you on your mobile phone.",
+							"assignmentExpression": "\"A new OTP code has been send to you on your mobile phone.\"",
 							"assignedVariableName": "otpUiFeedback.infoMessage"
 						}
 					]
@@ -497,7 +497,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "Error occurs while sending new code to you. Please contact site administrator.",
+							"assignmentExpression": "\"Error occurs while sending new code to you. Please contact site administrator.\"",
 							"assignedVariableName": "otpUiFeedback.infoMessage"
 						}
 					]
@@ -661,7 +661,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "The provided code is not valid.",
+							"assignmentExpression": "\"The provided code is not valid.\"",
 							"assignedVariableName": "otpUiFeedback.errorMessage"
 						}
 					]
