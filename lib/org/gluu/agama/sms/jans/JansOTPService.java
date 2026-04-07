@@ -12,9 +12,17 @@ import io.jans.as.common.service.common.UserService;
 import io.jans.service.cdi.util.CdiUtil;
 import io.jans.as.server.service.AuthenticationService;
 import io.jans.agama.engine.service.FlowService;
+import io.jans.agama.engine.script.LogUtils;
 
 import java.security.SecureRandom;
 import java.util.HashMap;
+
+import com.vonage.client.VonageClient;
+import com.vonage.client.sms.SmsSubmissionResponse;
+import com.vonage.client.sms.SmsSubmissionResponseMessage;
+import com.vonage.client.sms.messages.TextMessage;
+import com.vonage.client.sms.MessageStatus;
+
 
 public class JansOTPService extends OTPService {
 
@@ -31,7 +39,7 @@ public class JansOTPService extends OTPService {
 
     public JansOTPService(HashMap config) {
         flowConfig = config;
-        logger.debug("Flow config provided is  {}.", config);
+        LogUtils.log("Flow config provided is  %.", config);
     }
 
     public JansOTPService() {
@@ -39,24 +47,29 @@ public class JansOTPService extends OTPService {
 
     @Override
     public boolean validateCreds(String username, String password) {
-        logger.info("Validating user credentials {}.", username);
+        LogUtils.log("Validating user credentials %.", username);
         return authenticationService.authenticate(username, password);
     }
 
-    @Override
+    
     public String sendOTPCode(String username) {
         try {
-            logger.info("Sending OTP Code via SMS to {}.", username);
+            LogUtils.log("Sending OTP Code via SMS to %", username);
             String phone = getUserPhoneNumber(username);
             String maskedPone = maskPhone(phone);
             String otpCode = generateOTpCode(OTP_CODE_LENGTH);
-            logger.info("Generated OTP code is {}.", otpCode);
+            LogUtils.log("Generated OTP code is %", otpCode);
             String message = "Hi " + username + ", Welcome to AgamaLab. This is your OTP Code to complete your login process: " + otpCode;
             associateGeneratedCodeToUser(username, otpCode);
-            sendTwilioSms(username, phone, message);
+            if(flowConfig.get("VONAGE_SMS")){
+                sendVonageSms(username, phone, message);
+            }else if (flowConfig.get("TWILIO_SMS")){
+                sendTwilioSms(username, phone, message);
+            }
+            
             return maskedPone;
         } catch (Exception exception) {
-            logger.error("Error occur while sending  OTP code via SMS to {}. Error {}.", username, exception);
+            LogUtils.log("Error occur while sending  OTP code via SMS to %. Error %.", username, exception);
             return null;
         }
     }
@@ -145,10 +158,34 @@ public class JansOTPService extends OTPService {
             PhoneNumber TO_NUMBER = new com.twilio.type.PhoneNumber(phone);
             Twilio.init(flowConfig.get("ACCOUNT_SID"), flowConfig.get("AUTH_TOKEN"));
             Message.creator(TO_NUMBER, FROM_NUMBER, message).create();
-            logger.info("OTP code has been successfully send to {} on phone number {} .", userName, phone);
+            LogUtils.log(" TWILIO OTP code has been successfully send to {} on phone number {} .", userName, phone);
             return true;
         } catch (Exception exception) {
-            logger.error("Error sending OTP code to user {} on pone number {} : error {} .", userName, phone, exception);
+            LogUtils.log("Error sending OTP code to user {} on pone number {} : error {} .", userName, phone, exception);
+            return false;
+        }
+    }
+
+    private boolean sendVonageSms(String userName, String phone, String messageBody) {
+        try {
+            LogUtils.log("Vonage SMS function called");
+            VonageClient client = VonageClient.builder().apiKey(flowConfig.get("ACCOUNT_SID")).apiSecret(flowConfig.get("AUTH_TOKEN")).build();
+            TextMessage message = new TextMessage(flowConfig.get("FROM_NUMBER"),
+                                    phone,
+                                    messageBody
+                                    );
+            
+            SmsSubmissionResponse response = client.getSmsClient().submitMessage(message);
+            
+            if (response.getMessages().get(0).getStatus() == MessageStatus.OK) {
+                LogUtils.log("OTP code has been successfully send to % on phone number % .", userName, phone);
+            } else {
+                LogUtils.log("Message failed with error: %",response.getMessages().get(0).getErrorText());
+            }
+            
+            return true;
+        } catch (Exception exception) {
+            LogUtils.log("Error sending OTP code to user % on pone number % : error % .", userName, phone, exception);
             return false;
         }
     }
