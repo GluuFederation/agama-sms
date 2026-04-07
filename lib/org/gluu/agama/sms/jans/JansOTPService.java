@@ -158,10 +158,10 @@ public class JansOTPService extends OTPService {
             PhoneNumber TO_NUMBER = new com.twilio.type.PhoneNumber(phone);
             Twilio.init(flowConfig.get("ACCOUNT_SID"), flowConfig.get("AUTH_TOKEN"));
             Message.creator(TO_NUMBER, FROM_NUMBER, message).create();
-            logger.info("OTP code has been successfully send to {} on phone number {} .", userName, phone);
+            LogUtils.log(" TWILIO OTP code has been successfully send to {} on phone number {} .", userName, phone);
             return true;
         } catch (Exception exception) {
-            logger.error("Error sending OTP code to user {} on pone number {} : error {} .", userName, phone, exception);
+            LogUtils.log("Error sending OTP code to user {} on pone number {} : error {} .", userName, phone, exception);
             return false;
         }
     }
