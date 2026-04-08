@@ -9,7 +9,7 @@
 
 ## About Agama-SMS
 
-This repo is home to the Gluu Agama-sms project. This Agama project provides
+This repo is home to the Gluu **Agama-sms** project. This Agama project provides
 enhance security using the OTP SMS, reduces the risk of unauthorized access
 and fraud, and ensures compliance with regulatory requirements in various
 online services and transactions.
@@ -27,7 +27,7 @@ the [Agama Framework](https://docs.jans.io/head/agama/introduction/) like
 
 Different IAM servers may provide different methods and
 user interfaces from where an Agama project can be deployed on that server.
-The steps below show how the Agama-SMS project can be deployed on the
+The steps below show how the **Agama-SMS** project can be deployed on the
 [Janssen Server](https://jans.io).
 
 Deployment of an Agama project involves three steps.
@@ -38,7 +38,7 @@ Deployment of an Agama project involves three steps.
 
 
 #### Pre-Requisites
-- Third Party Accounts: To utilize the SMS functionality in the Agama-SMS project, you need access to an SMS service provider. A commonly used example is Twilio.
+- Third Party Accounts: To utilize the SMS functionality in the **Agama-SMS** project, you need access to an SMS service provider. A commonly used example is [Twilio](https://repo1.maven.org/maven2/com/twilio/sdk/twilio/11.3.6/) or [Vonage](https://repo1.maven.org/maven2/com/vonage/client/9.3.1/).
 
 
 ### Download the Project
@@ -79,10 +79,12 @@ Sample JSON:
        "org.gluu.agama.sms.otp": {},
        "org.gluu.agama.sms.register": {},
        "org.gluu.agama.sms.main": {
-         "ACCOUNT_SID": "PUT_YOUR_TWILIO_ACCOUNT_SID_HERE",
-         "AUTH_TOKEN": "PUT_YOUR_TWILIO_AUTH_TOKEN_HERE",
-         "FROM_NUMBER": "PUT_YOUR_TWILIO_FROM_NUMBER_HERE"
-       }
+          "ACCOUNT_SID": "PUT_YOUR_TWILIO_ACCOUNT_SID_HERE_OR_VONAGE_API_KEY",
+          "AUTH_TOKEN": "PUT_YOUR_TWILIO_AUTH_TOKEN_HERE_OR_VONAGE_SECRETE",
+          "FROM_NUMBER": "PUT_YOUR_TWILIO_OR_VONAGE_FROM_NUMBER_HERE",
+          "TWILIO_SMS": "SELECT_TRUE_OR_FALSE",
+          "VONAGE_SMS": "SELECT_TRUE_OR_FALSE"
+      }
    }
 ```
 

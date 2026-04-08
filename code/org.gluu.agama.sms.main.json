@@ -5,7 +5,7 @@
 				"agamaData": {
 					"isTopLevelFlow": true,
 					"basepath": "",
-					"configParams": "{\n  \"ACCOUNT_SID\": \"PUT_YOUR_TWILIO_ACCOUNT_SID_HERE\",\n  \"AUTH_TOKEN\": \"PUT_YOUR_TWILIO_AUTH_TOKEN_HERE\",\n  \"FROM_NUMBER\": \"PUT_YOUR_TWILIO_FROM_NUMBER_HERE\"\n}",
+					"configParams": "{\n  \"ACCOUNT_SID\": \"PUT_YOUR_TWILIO_ACCOUNT_SID_HERE_OR_VONAGE_API_KEY\",\n  \"AUTH_TOKEN\": \"PUT_YOUR_TWILIO_AUTH_TOKEN_HERE_OR_VONAGE_SECRETE\",\n  \"FROM_NUMBER\": \"PUT_YOUR_TWILIO_OR_VONAGE_FROM_NUMBER_HERE\",\n  \"TWILIO_SMS\": \"SELECT_TRUE_OR_FALSE\",\n  \"VONAGE_SMS\": \"SELECT_TRUE_OR_FALSE\"\n}",
 					"creationDate": "22/11/2024",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "700",
@@ -32,7 +32,9 @@
 			"measured": {
 				"width": 170,
 				"height": 124
-			}
+			},
+			"selected": true,
+			"deletable": false
 		},
 		{
 			"data": {
@@ -1520,8 +1522,8 @@
 		}
 	],
 	"viewport": {
-		"x": 0,
-		"y": 0,
-		"zoom": 1
+		"x": 112.59006365771594,
+		"y": 136.26007607942748,
+		"zoom": 0.7169776240079136
 	}
 }
