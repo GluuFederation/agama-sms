@@ -66,33 +66,36 @@ TUI (text-based UI). Refer to
 
 ### Configure The Project
 
-The Agama project accepts configuration parameters in the JSON format. Every Agama 
-project comes with a basic sample configuration file for reference.
+The Agama project accepts configuration parameters in JSON format. Every Agama project comes with a sample configuration file for reference.
 
-Below is a typical configuration of the Agama-hello project. As shown, it contains
-configuration parameters for the [flows contained in it](#flows-in-the-project):
+Below is a typical configuration for the Agama-SMS project:
 
-Sample JSON:
-
-```
-   {
-       "org.gluu.agama.sms.otp": {},
-       "org.gluu.agama.sms.register": {},
-       "org.gluu.agama.sms.main": {
-          "ACCOUNT_SID": "PUT_YOUR_TWILIO_ACCOUNT_SID_HERE_OR_VONAGE_API_KEY",
-          "AUTH_TOKEN": "PUT_YOUR_TWILIO_AUTH_TOKEN_HERE_OR_VONAGE_SECRETE",
-          "FROM_NUMBER": "PUT_YOUR_TWILIO_OR_VONAGE_FROM_NUMBER_HERE",
-          "TWILIO_SMS": "SELECT_TRUE_OR_FALSE",
-          "VONAGE_SMS": "SELECT_TRUE_OR_FALSE"
-      }
-   }
+```json
+{
+  "org.gluu.agama.sms.otp": {},
+  "org.gluu.agama.sms.register": {},
+  "org.gluu.agama.sms.main": {
+    "ACCOUNT_SID": "PUT_YOUR_TWILIO_ACCOUNT_SID_HERE_OR_VONAGE_API_KEY",
+    "AUTH_TOKEN": "PUT_YOUR_TWILIO_AUTH_TOKEN_HERE_OR_VONAGE_SECRET",
+    "FROM_NUMBER": "PUT_YOUR_TWILIO_OR_VONAGE_FROM_NUMBER_HERE",
+    "TWILIO_SMS": "SELECT_TRUE_OR_FALSE",
+    "VONAGE_SMS": "SELECT_TRUE_OR_FALSE"
+  }
+}
 ```
 
-| Flow | Property | Value Description |
-| ------------- | ------------- |----------------------- |
-| org.gluu.agama.sms.main | ACCOUNT_SID | Your Twilio ACCOUNT_SID (available in your Twilio account settings page)|
-| org.gluu.agama.sms.main | AUTH_TOKEN | Your Twilio AUTH_TOKEN (available in your Twilio account settings page)|
-| org.gluu.agama.sms.main | FROM_NUMBER | Your Twilio FROM_NUMBER (available in your Twilio account settings page)|
+| Parameter     | Required | Description                                                                                                    | Example                                                              |
+| ------------- | -------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `ACCOUNT_SID` | Yes      | Twilio Account SID or Vonage API Key, depending on the SMS provider you are using.                             | `ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx` (Twilio) or `abcd1234` (Vonage) |
+| `AUTH_TOKEN`  | Yes      | Twilio Auth Token or Vonage API Secret associated with the configured account.                                 | `your-auth-token`                                                    |
+| `FROM_NUMBER` | Yes      | The phone number or sender ID used to send SMS messages. It must be provisioned for the selected SMS provider. | `+15551234567`                                                       |
+| `TWILIO_SMS`  | Yes      | Set to `true` to use Twilio as the SMS provider. Set to `false` if using Vonage.                               | `true`                                                               |
+| `VONAGE_SMS`  | Yes      | Set to `true` to use Vonage as the SMS provider. Set to `false` if using Twilio.                               | `false`                                                              |
+
+> **Note**
+>
+> Enable **only one** SMS provider at a time. If `TWILIO_SMS` is set to `true`, `VONAGE_SMS` should be `false`, and vice versa. Ensure that the account credentials and sender number correspond to the selected provider.
+
 
 ### How it works at a glance
 
